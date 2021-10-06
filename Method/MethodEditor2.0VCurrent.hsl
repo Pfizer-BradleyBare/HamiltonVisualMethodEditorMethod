@@ -20,6 +20,9 @@
  namespace _Method { #include "Visual_NTR_library\\Visual_NTR_library.hs_" } 
 #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.res"
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Loading\\DeckLoadingVCurrent.hs_" } 
+ namespace _Method { #include "HSLML_STARLib.hsl" } 
+ namespace _Method { #include "IMCS\\HSLSeqLib.hsl" } 
+ namespace _Method { #include "389118_Pfizer\\IMCS\\JustBio\\JustBio\\HSLTrcLib.hsl" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 variable loopCounter1;
 variable Temp;
@@ -39,30 +42,8 @@ variable LabwareSequenceList[];
 variable LoadingPositionList[];
 variable NumLabware;
 variable LabwareArray[];
-variable RR;
-variable CT;
-variable Carrier38_Pos1;
-variable Carrier38_Pos2;
 variable Plate;
-variable Loading;
-variable Carrier38_Pos3;
-variable Carrier38_Pos4;
-variable Carrier14_Pos1;
-variable Carrier38_Pos5;
-variable Carrier14_Pos2;
-variable Carrier14_Pos3;
-variable Carrier14_Pos4;
-variable Carrier14_Pos5;
 variable Volume;
-variable FT_Ambient;
-variable FT_Cold;
-variable LoadingList[];
-variable Tip50;
-variable Tip300;
-variable Tip1000;
-variable EvalExpression;
-variable FindVal;
-variable Len;
 variable loopCounter4;
 variable NumBadSequences;
 variable BadSequences[];
@@ -278,6 +259,23 @@ variable ntrX;
 variable ntrY;
 variable ntrZ;
 global device ML_STAR ("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.lay", "ML_STAR", hslTrue);
+variable AverageVol;
+variable MissingVol;
+variable MeasuredTipVol;
+variable ExpectedVol;
+variable NewPos;
+variable EndPosition;
+variable VolThreshold;
+variable MixVol;
+variable Count;
+variable PosID;
+variable StartPosition;
+variable FloatString;
+variable LoopCount;
+variable WellIncrement;
+sequence Diluent;
+sequence TestSequence;
+sequence Tips300uL;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -317,8 +315,8 @@ DECKLOADINGVCURRENT::_InitLibrary();
 // {{ 1 1 0 "8702932d_163d_42cd_be72c9f8ee178846" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ScriptRootPath = Translate("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor");
 // }} ""
-// {{ 2 1 0 "ce3a4361_02b3_4024_aa40777c81f8d988" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-PythonRootPath = Translate("C:\\Program Files\\Python36");
+// {{ 2 1 0 "8e19e49e_10dc_4aca_9438f1733504bcc1" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+PythonRootPath = Translate("C:\\Program Files (x86)\\Python36-32");
 // }} ""
 // {{ 3 1 0 "adc7dfd5_1366_4a8e_bfdf7ff3e4ed8f31" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
@@ -3494,4 +3492,4 @@ DECKLOADINGVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-10-06 11:16$$checksum=8ee89aab$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-10-06 12:07$$checksum=6467abe0$$length=084$$
