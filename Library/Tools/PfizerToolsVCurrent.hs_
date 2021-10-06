@@ -1,0 +1,24 @@
+
+// this ALWAYS GENERATED file contains the sub-method library header
+// Generated at 10/5/2021 7:22:17 PM
+
+#pragma once
+#ifndef HSL_RUNTIME
+namespace PFIZERTOOLSVCURRENT {
+function _InitLibrary() { }
+function _ExitLibrary() { }
+function AssembleSampleSeq( sequence & _SampleSeq, variable _StartPos, variable _EndPos, variable & _PosArray[] ) void { }
+function GetContacts(  ) void { }
+function GetIndex( variable _SeqStartPosition, sequence & _ControllingSeq ) variable {  return (0); }
+function NotifyContacts( variable Subject, variable Body ) void { }
+function PostIncubationLiquidCheck( device & ML_Star, sequence Plate, sequence & Diluent, sequence & Tips300uL, variable StartPosition, variable EndPosition, variable ExpectedVol, variable VolThreshold ) void { }
+function SetSequence( sequence & Sequence, variable PlateStartPosition, variable PlateEndPosition ) void { }
+function Wait_for_Timer( timer & IncubationTimer ) void { }
+function _96WellAlphanumericToNumeric( variable Letter, variable Number ) variable {  return (0); }
+} // namespace
+#endif
+
+#ifdef HSL_RUNTIME
+#include __filename__ ".hsi"
+#endif
+// $$author=BAREB$$valid=0$$time=2021-10-05 19:22$$checksum=c934456f$$length=082$$

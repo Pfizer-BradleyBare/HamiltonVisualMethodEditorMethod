@@ -1,3 +1,0 @@
-Hello.
-
-This is not a correct method branch for any automation system. You will need to select the correct branch using git.
