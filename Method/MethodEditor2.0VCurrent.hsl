@@ -18,8 +18,8 @@
  namespace _Method { #include "HSLVacuuBrandPump.hsl" } 
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Tools\\PfizerToolsVCurrent.hs_" } 
  namespace _Method { #include "Visual_NTR_library\\Visual_NTR_library.hs_" } 
- namespace _Method { #include "HSLML_STARLib.hsl" } 
 #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.res"
+ namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Loading\\DeckLoadingVCurrent.hs_" } 
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 variable loopCounter1;
 variable Temp;
@@ -277,23 +277,6 @@ variable iswapPresent;
 variable ntrX;
 variable ntrY;
 variable ntrZ;
-variable AverageVol;
-variable MissingVol;
-variable MeasuredTipVol;
-variable ExpectedVol;
-variable NewPos;
-variable EndPosition;
-variable VolThreshold;
-variable MixVol;
-variable PosID;
-variable Count;
-variable StartPosition;
-variable FloatString;
-variable LoopCount;
-variable WellIncrement;
-sequence Diluent;
-sequence TestSequence;
-sequence Tips300uL;
 global device ML_STAR ("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.lay", "ML_STAR", hslTrue);
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
@@ -328,6 +311,7 @@ PFIZERTOOLSVCURRENT::_InitLibrary();
 PFIZERTIPCOUNTERVCURRENT::_InitLibrary();
 PFIZERDESALTINGVCURRENT::_InitLibrary();
 VISUAL_NTR_LIBRARY::_InitLibrary();
+DECKLOADINGVCURRENT::_InitLibrary();
 ::RegisterAbortHandler( "OnAbort");
 // }} ""
 // {{ 1 1 0 "8702932d_163d_42cd_be72c9f8ee178846" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
@@ -1492,8 +1476,8 @@ customDialog098AC36A9D364ebbA51675CB641074C1.ShowCustomDialog();
 // {{ 361 1 0 "122b80b1_c053_4aea_9637411fa7fe4769" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{{ 362 1 0 "e995ee19_b7c0_4c5b_b0984599740abf3a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-DoDeckLoading(LabwareArray, _PreRun_IsUsed, _Pipette_UsedTips, _Desalt_LoadingArray, _Vacuum_Plate);
+// {{{ 362 1 0 "4e8cb638_0c5a_4a96_8f7202f7da5a0f6d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+DECKLOADINGVCURRENT::DoDeckLoading(LabwareArray, _PreRun_IsUsed, _Pipette_UsedTips, _Desalt_LoadingArray, _Vacuum_Plate);
 // }} ""
 // {{{ 363 1 0 "258b41d0_4cbf_4550_90a5ca1f517f6731" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ChooseTips(_Pipette_UsedTips.ElementAt( _Pipette_NTR50Index -1), _Pipette_UsedTips.ElementAt( _Pipette_NTR300Index -1), _Pipette_UsedTips.ElementAt( _Pipette_FTR300SlimIndex -1), _Pipette_UsedTips.ElementAt( _Pipette_FTR1000Index -1), Tip50Counter, Tip300Counter, Tip300SlimCounter, Tip1000Counter, wasteNTR, waste300NTR);
@@ -2761,8 +2745,8 @@ DialogOut = customDialog090A26209804410fB11962C1179B96AC.GetCustomDialogProperty
 if (DialogOut == 6)
 {
 // }} ""
-// {{{ 718 1 0 "80057c79_326b_458a_a1ab2955e277287d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-DoDeckLoading(LabwareArray, _PreRun_IsUsed, _Pipette_UsedTips, _Desalt_LoadingArray, _Vacuum_Plate);
+// {{{ 718 1 0 "a79928c6_3386_42a1_8b650a9324ea8214" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+DECKLOADINGVCURRENT::DoDeckLoading(LabwareArray, _PreRun_IsUsed, _Pipette_UsedTips, _Desalt_LoadingArray, _Vacuum_Plate);
 // }} ""
 // {{ 719 1 0 "612877e7_bc59_4e7f_ba88c77002b691df" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
@@ -3505,8 +3489,9 @@ PFIZERTOOLSVCURRENT::_ExitLibrary();
 PFIZERTIPCOUNTERVCURRENT::_ExitLibrary();
 PFIZERDESALTINGVCURRENT::_ExitLibrary();
 VISUAL_NTR_LIBRARY::_ExitLibrary();
+DECKLOADINGVCURRENT::_ExitLibrary();
 // }} ""
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-10-05 19:30$$checksum=97a95749$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-10-06 11:16$$checksum=8ee89aab$$length=084$$
