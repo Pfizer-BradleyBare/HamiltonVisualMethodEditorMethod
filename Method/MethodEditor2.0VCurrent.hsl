@@ -259,23 +259,6 @@ variable ntrX;
 variable ntrY;
 variable ntrZ;
 global device ML_STAR ("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.lay", "ML_STAR", hslTrue);
-variable AverageVol;
-variable MissingVol;
-variable MeasuredTipVol;
-variable ExpectedVol;
-variable NewPos;
-variable EndPosition;
-variable VolThreshold;
-variable MixVol;
-variable Count;
-variable PosID;
-variable StartPosition;
-variable FloatString;
-variable LoopCount;
-variable WellIncrement;
-sequence Diluent;
-sequence TestSequence;
-sequence Tips300uL;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -315,8 +298,8 @@ DECKLOADINGVCURRENT::_InitLibrary();
 // {{ 1 1 0 "8702932d_163d_42cd_be72c9f8ee178846" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ScriptRootPath = Translate("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor");
 // }} ""
-// {{ 2 1 0 "8e19e49e_10dc_4aca_9438f1733504bcc1" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-PythonRootPath = Translate("C:\\Program Files (x86)\\Python36-32");
+// {{ 2 1 0 "b6a7d9ef_dbba_4d0a_9c021eaeda662356" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+PythonRootPath = Translate("C:\\Program Files\\Python36");
 // }} ""
 // {{ 3 1 0 "adc7dfd5_1366_4a8e_bfdf7ff3e4ed8f31" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
@@ -3492,4 +3475,4 @@ DECKLOADINGVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-10-06 12:07$$checksum=6467abe0$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-10-06 13:43$$checksum=e3fa2458$$length=084$$
