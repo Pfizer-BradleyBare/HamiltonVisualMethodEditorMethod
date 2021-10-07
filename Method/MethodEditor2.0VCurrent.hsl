@@ -298,8 +298,8 @@ DECKLOADINGVCURRENT::_InitLibrary();
 // {{ 1 1 0 "8702932d_163d_42cd_be72c9f8ee178846" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ScriptRootPath = Translate("C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor");
 // }} ""
-// {{ 2 1 0 "1a4a8971_0099_447a_b240467bc2b573c4" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-PythonRootPath = Translate("C:\\Program Files (x86)\\Python36-32");
+// {{ 2 1 0 "4f735b8a_2fb1_4743_a43be5c191949112" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+PythonRootPath = Translate("C:\\Program Files\\Python36");
 // }} ""
 // {{ 3 1 0 "adc7dfd5_1366_4a8e_bfdf7ff3e4ed8f31" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
@@ -3475,4 +3475,4 @@ DECKLOADINGVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-10-07 11:35$$checksum=9ea457c8$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-10-07 13:13$$checksum=f8cd9de5$$length=084$$
