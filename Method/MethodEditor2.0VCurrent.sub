@@ -1062,12 +1062,4 @@ return (0);
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-<<<<<<< HEAD
-<<<<<<< HEAD
-// $$author=FCNAMR-ADWMSBC$$valid=0$$time=2021-11-02 13:45$$checksum=cb4f3903$$length=093$$
-=======
-// $$author=FCNCHVGRD-PDAMI$$valid=0$$time=2021-10-20 13:46$$checksum=92c9d4e4$$length=094$$
->>>>>>> 37c9f87889abd61ffd2da857fcf3e2f943dbf607
-=======
 // $$author=FCNAMR-ADWMSBC$$valid=0$$time=2021-11-05 12:02$$checksum=27bb6b96$$length=093$$
->>>>>>> FixedMerge
