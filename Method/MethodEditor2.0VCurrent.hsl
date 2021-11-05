@@ -101,8 +101,6 @@ sequence _Desalt_Buffer;
 variable _Desalt_TipType;
 variable _Desalt_LoadingArray[];
 variable _Desalt_Sets;
-global variable SizeX100_1;
-global variable SizeX100_2;
 variable ParseNumeric;
 variable ParseAlpha;
 variable Tip300Counter;
@@ -3549,4 +3547,4 @@ DECKLOADINGVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=FCNAMR-ADWMSBC$$valid=0$$time=2021-11-02 13:45$$checksum=789881e0$$length=093$$
+// $$author=FCNAMR-ADWMSBC$$valid=0$$time=2021-11-05 12:02$$checksum=ac54a1ed$$length=093$$
