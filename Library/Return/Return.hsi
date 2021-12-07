@@ -1,0 +1,165 @@
+// {{{ 2 "IncludeGuard" "PragmaOnce"
+#pragma once
+// }} ""
+#include "HSLStrLib.hsl"
+#include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Commands\\Commands.hs_"
+#include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Tools\\Tools.hs_"
+/* {{ 2 "LibraryInsertLine" "" */ // }} ""
+// {{ 2 "TemplateIncludeBlock" ""
+#include "HSLMETEDLib.hs_"
+#include "HSLMECCLib.hs_"
+// }} ""
+// {{{ 2 "LibraryNamespace" "Begin"
+namespace RETURN {
+// }} ""
+/* {{ 2 "VariableInsertLine" "" */ // }} ""
+// {{{ 2 "SubmethodForwardDeclaration" ""
+function CreateReturnString( variable ReturnID, variable ReturnMessage, variable AdditionalReturnItems, variable AdditionalReturnItemMessages ) variable ;
+function GetReturnID( variable ReturnString ) variable ;
+function GetReturnMessage( variable ReturnString ) variable ;
+function GetReturnStringItemMessage( variable ReturnString, variable Item ) variable ;
+function GetReturnSuccessFlag( variable ReturnString ) variable ;
+// }} ""
+function _InitLibrary() {
+// {{ 2 "AutoInitBlock" ""
+COMMANDS::_InitLibrary();
+TOOLS::_InitLibrary();
+// }} ""
+}
+function _ExitLibrary() {
+// {{ 2 "AutoExitBlock" ""
+COMMANDS::_ExitLibrary();
+TOOLS::_ExitLibrary();
+// }} ""
+}
+// {{{ 5 "CreateReturnString" "Begin"
+function CreateReturnString( variable ReturnID, variable ReturnMessage, variable AdditionalReturnItems, variable AdditionalReturnItemMessages ) variable {
+// }} ""
+private variable Counter;
+private variable NumReturnItems;
+private variable ReturnString;
+private variable ReturnItemsArray[];
+private variable ReturnItemsMessageArray[];
+// {{ 5 "CreateReturnString" "InitLocals"
+// }} ""
+// {{{ 1 1 0 "47eeac5e_bede_4972_a8aedf3efbc385c7" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Translate(","), AdditionalReturnItems, ReturnItemsArray);
+// }} ""
+// {{{ 2 1 0 "23da8b56_c384_4e4d_8708cbe640a5dca0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Translate(","), AdditionalReturnItemMessages, ReturnItemsMessageArray);
+// }} ""
+// {{ 3 1 0 "e09ed5da_e08e_4d83_8cd12bc726a3b421" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+ReturnString = Translate("");
+// }} ""
+// {{{ 4 1 0 "b8a44e7f_f5f2_41cb_a73cc35136f53b91" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ReturnID = StrIVal(ReturnID);
+// }} ""
+// {{{ 5 1 0 "e897bb39_305d_48c1_92837d14934a0042" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ReturnString = StrConcat4(ReturnString, Translate("[FuncReturnID]"), ReturnID, Translate(""));
+// }} ""
+// {{{ 6 1 0 "22986323_d53f_4981_8174d908b4ac3d4d" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ReturnString = StrConcat4(ReturnString, Translate("[FuncReturnMessage]"), ReturnMessage, Translate(""));
+// }} ""
+// {{ 7 1 0 "a611a298_01f4_4053_8eacc3a75c9e4f00" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
+NumReturnItems=ReturnItemsArray.GetSize();
+// }} ""
+// {{ 8 1 0 "d13220f0_be03_4f76_8a71e986fed214ca" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+{
+for(Counter = 0; Counter < NumReturnItems;)
+{
+Counter = Counter + 1;
+// }} ""
+// {{{ 9 1 0 "c8697522_c5b6_4b1a_876df40c697d890e" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ReturnString = StrConcat8(ReturnString, Translate("["), ReturnItemsArray.ElementAt( Counter -1), Translate("]"), ReturnItemsMessageArray.ElementAt( Counter -1), Translate(""), Translate(""), Translate(""));
+// }} ""
+// {{ 10 1 0 "d13220f0_be03_4f76_8a71e986fed214ca" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+}
+}
+// }} ""
+// {{{ 11 1 0 "0908458b_f1b1_4bd2_82088ebf241a3192" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (ReturnString);
+// }} ""
+// {{{ 5 "CreateReturnString" "End"
+}
+// }} ""
+// {{{ 5 "GetReturnSuccessFlag" "Begin"
+function GetReturnSuccessFlag( variable ReturnString ) variable {
+// }} ""
+private variable SuccessFlag;
+private variable Dict[];
+// {{ 5 "GetReturnSuccessFlag" "InitLocals"
+// }} ""
+// {{{ 25 1 0 "2e4c1aee_07d8_43f0_ad35c57d6d3f161c" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::ParseCommandParametersString(ReturnString, Dict);
+// }} ""
+// {{{ 26 1 0 "c561cf70_acfd_4fba_a7f67c9b249691c4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("FuncReturnSuccessFlag"), SuccessFlag);
+// }} ""
+// {{{ 27 1 0 "d3dfeec6_9c45_422a_9fbd63c9a2e5bd38" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (SuccessFlag);
+// }} ""
+// {{{ 5 "GetReturnSuccessFlag" "End"
+}
+// }} ""
+// {{{ 5 "GetReturnStringItemMessage" "Begin"
+function GetReturnStringItemMessage( variable ReturnString, variable Item ) variable {
+// }} ""
+private variable Message;
+private variable Dict[];
+// {{ 5 "GetReturnStringItemMessage" "InitLocals"
+// }} ""
+// {{{ 21 1 0 "314820c5_9b72_420b_92168104f6766cb9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::ParseCommandParametersString(ReturnString, Dict);
+// }} ""
+// {{{ 22 1 0 "ac97193c_089b_4c26_91fdeaeece8852c9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Item, Message);
+// }} ""
+// {{{ 23 1 0 "64e6dda5_b1ce_448c_b3100b7c0f4ac4a1" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Item);
+// }} ""
+// {{{ 5 "GetReturnStringItemMessage" "End"
+}
+// }} ""
+// {{{ 5 "GetReturnMessage" "Begin"
+function GetReturnMessage( variable ReturnString ) variable {
+// }} ""
+private variable SuccessFlag;
+private variable Dict[];
+// {{ 5 "GetReturnMessage" "InitLocals"
+// }} ""
+// {{{ 17 1 0 "ac01e89d_2c44_459b_a84b5396c74922e9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::ParseCommandParametersString(ReturnString, Dict);
+// }} ""
+// {{{ 18 1 0 "876c6aa3_6892_4f95_bd22bf3116e43776" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("FuncReturnMessage"), SuccessFlag);
+// }} ""
+// {{{ 19 1 0 "6f948cca_117b_4d90_bc67ad936137c178" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (SuccessFlag);
+// }} ""
+// {{{ 5 "GetReturnMessage" "End"
+}
+// }} ""
+// {{{ 5 "GetReturnID" "Begin"
+function GetReturnID( variable ReturnString ) variable {
+// }} ""
+private variable SuccessFlag;
+private variable Dict[];
+// {{ 5 "GetReturnID" "InitLocals"
+// }} ""
+// {{{ 13 1 0 "ed1df894_2040_41c1_8666bfbd6342a6ce" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::ParseCommandParametersString(ReturnString, Dict);
+// }} ""
+// {{{ 14 1 0 "f01198c4_b09c_490e_b23f695e96fb5395" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("FuncReturnID"), SuccessFlag);
+// }} ""
+// {{{ 15 1 0 "85976399_d8bf_472c_8638af625c9ba5f2" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (SuccessFlag);
+// }} ""
+// {{{ 5 "GetReturnID" "End"
+}
+// }} ""
+/* {{ 2 "SubmethodInsertLine" "" */ // }} ""
+// {{{ 2 "LibraryNamespace" "End"
+} // library namespace
+// }} ""
+// $$author=BAREB$$valid=0$$time=2021-12-07 14:17$$checksum=6297c627$$length=084$$

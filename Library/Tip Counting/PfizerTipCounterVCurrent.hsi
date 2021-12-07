@@ -8,8 +8,8 @@
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
 #include "HSLMETEDLib.hs_"
-#include "389118_Pfizer\\IMCS\\Pfizer\\HSLMECCLib.hs_"
-#include "389118_Pfizer\\IMCS\\Pfizer\\HSLPTLLib.hsl"
+#include "HSLMECCLib.hs_"
+#include "HSLPTLLib.hsl"
 // }} ""
 // {{{ 2 "LibraryNamespace" "Begin"
 namespace PFIZERTIPCOUNTERVCURRENT {
@@ -50,13 +50,12 @@ private dialog customDialogF2C6923F5D8A410680714F107C4A25D0;
 private dialog customDialog1E89F162614D4c91BE4BBCC9152C3895;
 private variable loopCounter9;
 private variable _Avail;
-private variable _NTR_Total;
 private variable _Num_NTR300;
 private variable _Temp;
 private variable _Num_NTR50;
 private variable _Req;
 private variable FileCheckReturn;
-private variable _Num_Slim1000Tips;
+private variable _NTR_Total;
 // {{ 5 "ChooseTipsNTR" "InitLocals"
 Tip50Counter = 0;
 Tip300Counter = 0;
@@ -69,7 +68,7 @@ Tip50Counter = Translate("Tip50Counter");
 // {{ 57 1 0 "7a4792df_555a_4604_af17f1ba13d98114" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 Tip300Counter = Translate("Tip300Counter");
 // }} ""
-// {{ 58 1 0 "d37ceb11_27c7_4db1_8b074f37f110c26e" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 58 1 0 "cd972b3d_7f7e_4fdc_b7aa3b926f5499b8" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 _NTR_Total = 768;
 // }} ""
 // {{ 59 1 0 "e4104986_b3a3_48c7_90b600a9885965f7" "{586C3429-F931-405f-9938-928E22C90BFA}"
@@ -320,18 +319,13 @@ VISUAL_NTR_LIBRARY::Channels_TipCounter_Write(ML_STAR, NTR50Seq, Translate("Tip5
 function ChooseTipsFTR( device & ML_STAR, sequence & Slim300Seq, sequence & Slim1000Seq, variable _Num_Slim300Tips, variable _Num_Slim1000Tips, variable & Tip300SlimCounter, variable & Tip1000Counter ) void {
 // }} ""
 private dialog customDialogCD90D916243F41e7BD7BE497F622D2A4;
-private dialog customDialog39C71EE10FEA4d1aA9F34851479E70A4;
 private dialog customDialog0817E73E3BDC408c9414EDB153D6CAE2;
-private dialog customDialog429D30E4630A44e3AC12068701CF1307;
 private variable loopCounter9;
 private variable _Avail;
 private variable Tip1000SlimCounter;
 private variable _Num_Slim300;
-private variable _NTR_Total;
-private variable _Num_NTR300;
 private variable _Temp;
 private variable _Num_Slim1000;
-private variable _Num_NTR50;
 private variable _Req;
 private variable FileCheckReturn;
 // {{ 5 "ChooseTipsFTR" "InitLocals"
@@ -533,8 +527,6 @@ TrcTrace(Translate("1000SlimReq"), _Num_Slim1000Tips);
 function SaveTipsFTR( device & ML_STAR, sequence Slim300Seq, sequence Slim1000Seq ) void {
 // }} ""
 private variable _Temp;
-private sequence wasteNTR;
-private sequence waste300NTR;
 // {{ 5 "SaveTipsFTR" "InitLocals"
 // }} ""
 // {{ 118 1 0 "8e4d594b_6a01_44f6_9433c0187f22243f" "{B31F353B-5D80-11d4-A5EB-0050DA737D89}"
@@ -576,4 +568,4 @@ TipCount::Write2(Slim300Seq, Translate("Tip300SlimCounter"), ML_STAR);
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-10-05 19:21$$checksum=4cfcea73$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-12-06 12:34$$checksum=53c4a958$$length=084$$

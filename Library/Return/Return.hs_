@@ -1,0 +1,21 @@
+
+// this ALWAYS GENERATED file contains the sub-method library header
+// Generated at 12/7/2021 2:17:05 PM
+
+#pragma once
+#ifndef HSL_RUNTIME
+namespace RETURN {
+function _InitLibrary() { }
+function _ExitLibrary() { }
+function CreateReturnString( variable ReturnID, variable ReturnMessage, variable AdditionalReturnItems, variable AdditionalReturnItemMessages ) variable {  return (0); }
+function GetReturnID( variable ReturnString ) variable {  return (0); }
+function GetReturnMessage( variable ReturnString ) variable {  return (0); }
+function GetReturnStringItemMessage( variable ReturnString, variable Item ) variable {  return (0); }
+function GetReturnSuccessFlag( variable ReturnString ) variable {  return (0); }
+} // namespace
+#endif
+
+#ifdef HSL_RUNTIME
+#include __filename__ ".hsi"
+#endif
+// $$author=BAREB$$valid=0$$time=2021-12-07 14:17$$checksum=eb9e979f$$length=082$$

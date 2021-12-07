@@ -1,0 +1,21 @@
+
+// this ALWAYS GENERATED file contains the sub-method library header
+// Generated at 12/7/2021 3:49:27 PM
+
+#pragma once
+#ifndef HSL_RUNTIME
+namespace COMMANDS {
+function _InitLibrary() { }
+function _ExitLibrary() { }
+function GetCommandStringCommand( variable & i_CommandStringArray[] ) variable {  return (0); }
+function GetCommandStringModule( variable & i_CommandStringArray[] ) variable {  return (0); }
+function GetCommandStringParameterStringsArray( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void { }
+function GetDictionaryItem( variable & i_Dictionary[], variable InputKey, variable & OutputValue ) void { }
+function ParseCommandParametersString( variable InputCommand, variable & OutputDictionary[] ) void { }
+} // namespace
+#endif
+
+#ifdef HSL_RUNTIME
+#include __filename__ ".hsi"
+#endif
+// $$author=BAREB$$valid=0$$time=2021-12-07 15:49$$checksum=550f92bd$$length=082$$
