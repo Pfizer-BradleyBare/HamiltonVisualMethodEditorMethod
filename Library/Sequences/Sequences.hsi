@@ -6,6 +6,7 @@
 #include "HSLTrcLib.hsl"
 #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Tools\\Tools.hs_"
 #include "HSLUtilLib2.hsl"
+#include "HSLSeqLib.hsl"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
 #include "HSLMETEDLib.hs_"
@@ -18,7 +19,8 @@ namespace SEQUENCES {
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function CheckSequences( device & ML_STAR, variable & SequenceStringsArray[] ) void ;
-function StringToSequence( device & ML_STAR, variable & SequenceStringsArray[], sequence & SequencesArray[] ) variable ;
+function SequenceToNameString( device & ML_STAR, sequence & i_SequencesArray[], variable & o_SequenceNameStringsArray[] ) variable ;
+function StringToSequence( device & ML_STAR, variable & i_SequenceStringsArray[], sequence & o_SequencesArray[] ) variable ;
 // }} ""
 function _InitLibrary() {
 // {{ 2 "AutoInitBlock" ""
@@ -43,78 +45,79 @@ TOOLS::_ExitLibrary();
 // }} ""
 }
 // {{{ 5 "StringToSequence" "Begin"
-function StringToSequence( device & ML_STAR, variable & SequenceStringsArray[], sequence & SequencesArray[] ) variable {
+function StringToSequence( device & ML_STAR, variable & i_SequenceStringsArray[], sequence & o_SequencesArray[] ) variable {
 // }} ""
 private variable NumSequenceStrings;
 private variable Counter;
 private variable Count;
 private variable ret;
 private variable BadSequenceIndices;
+private sequence SequencesArray[];
 // {{ 5 "StringToSequence" "InitLocals"
-SequencesArray.SetSize( 0);
+o_SequencesArray.SetSize( 0);
 // }} ""
-// {{ 16 1 0 "68369fd0_f718_4083_84d26b4dd0579ddb" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
-NumSequenceStrings=SequenceStringsArray.GetSize();
+// {{ 24 1 0 "0414f070_0ded_4e0e_8fa848b32d931b2f" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
+NumSequenceStrings=i_SequenceStringsArray.GetSize();
 // }} ""
-// {{ 17 1 0 "3fc1767b_d256_46cf_acd73a779b6f4fcf" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-SequencesArray.SetSize(NumSequenceStrings);
+// {{ 25 1 0 "7d1fa5b2_f7ed_4dfc_bfda9b595d98efd9" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
+o_SequencesArray.SetSize(NumSequenceStrings);
 // }} ""
-// {{ 18 1 0 "db322bf1_b375_4736_aacb6cf1c24a3dd8" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 26 1 0 "db322bf1_b375_4736_aacb6cf1c24a3dd8" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 BadSequenceIndices = Translate("");
 // }} ""
-// {{ 19 1 0 "d250bf26_013b_473d_95378236c07b4bee" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 27 1 0 "d250bf26_013b_473d_95378236c07b4bee" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 Count = 0;
 // }} ""
-// {{ 20 1 0 "dd4811ae_ac8a_4b78_a26f4694cf265279" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 28 1 0 "dd4811ae_ac8a_4b78_a26f4694cf265279" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
 {
 for(Counter = 0; Counter < NumSequenceStrings;)
 {
 Counter = Counter + 1;
 // }} ""
-// {{{ 21 1 0 "e5ea1b57_734d_425d_a51805f207700dd7" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-ret = DevGetSequenceRef(ML_STAR, SequenceStringsArray.ElementAt( Counter -1), SequencesArray.ElementAt( Counter -1));
+// {{{ 29 1 0 "01caaa33_78e4_44b9_8bbd168360114510" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ret = DevGetSequenceRef(ML_STAR, i_SequenceStringsArray.ElementAt( Counter -1), o_SequencesArray.ElementAt( Counter -1));
 // }} ""
-// {{ 22 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 30 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (ret != 0)
 {
 // }} ""
-// {{ 23 1 0 "f346516c_b400_4029_bd30c337595ab75a" "{B31F3544-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 31 1 0 "f346516c_b400_4029_bd30c337595ab75a" "{B31F3544-5D80-11d4-A5EB-0050DA737D89}"
 Count = Count + 1;
 // }} ""
-// {{ 24 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 32 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 else
 {
 // }} ""
-// {{{ 25 1 0 "0bb1fb9d_fde9_49b7_badde2abd32f5dd2" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 33 1 0 "0bb1fb9d_fde9_49b7_badde2abd32f5dd2" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 BadSequenceIndices = StrConcat4(BadSequenceIndices, Counter, Translate(""), Translate(","));
 // }} ""
-// {{ 26 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 34 1 0 "e0d2f80d_830d_4c4c_b63f18141174144a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 27 1 0 "dd4811ae_ac8a_4b78_a26f4694cf265279" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 35 1 0 "dd4811ae_ac8a_4b78_a26f4694cf265279" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
 }
 }
 // }} ""
-// {{{ 28 1 0 "71a953ef_beeb_4268_a9668939871a358c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 36 1 0 "71a953ef_beeb_4268_a9668939871a358c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 StrTrimRight(BadSequenceIndices, Translate(","));
 // }} ""
-// {{ 29 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 37 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (Count == NumSequenceStrings)
 {
 // }} ""
-// {{{ 30 1 0 "8cc07fed_bbc9_4e7a_bc92364757b33824" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+// {{{ 38 1 0 "8cc07fed_bbc9_4e7a_bc92364757b33824" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
 return (Translate("True"));
 // }} ""
-// {{ 31 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 39 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 else
 {
 // }} ""
-// {{{ 32 1 0 "af88fc93_d741_4694_a582fba81244eae9" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+// {{{ 40 1 0 "af88fc93_d741_4694_a582fba81244eae9" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
 return (BadSequenceIndices);
 // }} ""
-// {{ 33 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 41 1 0 "99277f0f_329c_4ec4_9c63dd6cacea5cd6" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
 // {{{ 5 "StringToSequence" "End"
@@ -182,8 +185,48 @@ abort;
 // {{{ 5 "CheckSequences" "End"
 }
 // }} ""
+// {{{ 5 "SequenceToNameString" "Begin"
+function SequenceToNameString( device & ML_STAR, sequence & i_SequencesArray[], variable & o_SequenceNameStringsArray[] ) variable {
+// }} ""
+private variable NumSequenceStrings;
+private variable Counter;
+private variable ret;
+private variable Count;
+private variable BadSequenceIndices;
+private variable Name;
+// {{ 5 "SequenceToNameString" "InitLocals"
+o_SequenceNameStringsArray.SetSize( 0);
+// }} ""
+// {{ 16 1 0 "d96943ff_bb17_4c7a_877c3d856cf423d9" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
+NumSequenceStrings=i_SequencesArray.GetSize();
+// }} ""
+// {{ 17 1 0 "15e1457c_f395_49fe_8711c9ba719292d5" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
+o_SequenceNameStringsArray.SetSize(NumSequenceStrings);
+// }} ""
+// {{ 18 1 0 "602c84d1_57bf_45b0_ac87dd86ff83fc54" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+{
+for(Counter = 0; Counter < NumSequenceStrings;)
+{
+Counter = Counter + 1;
+// }} ""
+// {{{ 19 1 0 "16281083_8387_41bf_861d38418c8aa8c8" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+Name = SeqGetName(i_SequencesArray.ElementAt( Counter -1));
+// }} ""
+// {{ 20 1 0 "7034e781_b9d4_46b5_aad432db9b5cac03" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
+o_SequenceNameStringsArray.SetAt(Counter-1, Name);
+// }} ""
+// {{ 21 1 0 "602c84d1_57bf_45b0_ac87dd86ff83fc54" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+}
+}
+// }} ""
+// {{{ 22 1 0 "9ac922b4_eae7_4d78_a08bb64829d021c4" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("True"));
+// }} ""
+// {{{ 5 "SequenceToNameString" "End"
+}
+// }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-12-06 16:25$$checksum=e07b5d75$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-12-07 17:36$$checksum=161d431d$$length=084$$

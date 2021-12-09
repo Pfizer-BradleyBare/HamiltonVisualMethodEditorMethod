@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 12/6/2021 4:25:06 PM
+// Generated at 12/7/2021 5:36:48 PM
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -8,11 +8,12 @@ namespace SEQUENCES {
 function _InitLibrary() { }
 function _ExitLibrary() { }
 function CheckSequences( device & ML_STAR, variable & SequenceStringsArray[] ) void { }
-function StringToSequence( device & ML_STAR, variable & SequenceStringsArray[], sequence & SequencesArray[] ) variable {  return (0); }
+function SequenceToNameString( device & ML_STAR, sequence & i_SequencesArray[], variable & o_SequenceNameStringsArray[] ) variable {  return (0); }
+function StringToSequence( device & ML_STAR, variable & i_SequenceStringsArray[], sequence & o_SequencesArray[] ) variable {  return (0); }
 } // namespace
 #endif
 
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2021-12-06 16:25$$checksum=b4079343$$length=082$$
+// $$author=BAREB$$valid=0$$time=2021-12-07 17:36$$checksum=c0f9bd56$$length=082$$
