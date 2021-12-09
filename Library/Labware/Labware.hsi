@@ -18,9 +18,9 @@ variable PlateLoadingLocations[];
 variable PlateNames[];
 variable PlateVolumes[];
 variable PlateSequenceStrings[];
-variable LidSequenceStrings[];
 variable PlateLabwareNames[];
 variable PlateLabwareTypes[];
+variable PlateLidSequenceStrings[];
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function GetAllSequenceStrings( variable & SequenceStrings[] ) void ;
@@ -31,7 +31,7 @@ function GetPlateLidSequenceString( variable & PlateNamesArray[], variable & Lid
 function GetPlateLoadingLocation( variable & PlateNamesArray[], variable & PlateLoadingLocationsArray[] ) variable ;
 function GetPlateSequenceString( variable & PlateNamesArray[], variable & PlateSequenceStringsArray[] ) variable ;
 function GetPlateVolume( variable & PlateNamesArray[], variable & PlateVolumesArray[] ) variable ;
-function Init( variable & i_LabwareCommandStringsArray[] ) void ;
+function Init( variable i_LabwareCommandString ) void ;
 // }} ""
 function _InitLibrary() {
 // {{ 2 "AutoInitBlock" ""
@@ -63,8 +63,8 @@ for(Counter = 0; Counter < NumLabware;)
 {
 Counter = Counter + 1;
 // }} ""
-// {{ 3 1 0 "524c487f_c80c_4fa1_9d05e1ca4a961236" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-LidSequence = LidSequenceStrings.ElementAt( Counter -1);
+// {{ 3 1 0 "08811e0c_f445_4b32_ae8f63d3dc2c358b" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+LidSequence = PlateLidSequenceStrings.ElementAt( Counter -1);
 // }} ""
 // {{ 4 1 0 "12fbeac8_0829_47cd_88201eba8cb13a5f" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (LidSequence != "False")
@@ -594,8 +594,8 @@ Counter2 = Counter2 + 1;
 if (PlateNames.ElementAt( Counter -1) == PlateNamesArray.ElementAt( Counter2 -1))
 {
 // }} ""
-// {{ 73 1 0 "3b97d42e_7cd5_4e10_b10645e476d3f8cd" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
-LidSequenceStringsArray.SetAt(Counter2-1, LidSequenceStrings.ElementAt( Counter -1));
+// {{ 73 1 0 "cf996cc0_b824_4079_aaa9de274d4423de" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
+LidSequenceStringsArray.SetAt(Counter2-1, PlateLidSequenceStrings.ElementAt( Counter -1));
 // }} ""
 // {{ 74 1 0 "bd68f22a_f020_4c5c_b676261f8eb38da3" "{B31F3544-5D80-11d4-A5EB-0050DA737D89}"
 Count = Count + 1;
@@ -633,78 +633,79 @@ return (Translate("False"));
 }
 // }} ""
 // {{{ 5 "Init" "Begin"
-function Init( variable & i_LabwareCommandStringsArray[] ) void {
+function Init( variable i_LabwareCommandString ) void {
 // }} ""
-private variable Counter;
-private variable NumLabware;
-private variable Params[];
-private variable Titles[];
 private variable Dict[];
+private variable LidSequencesString;
+private variable VolumesString;
+private variable LabwareNamesString;
+private variable LoadingLocationsString;
+private variable LabwareCategoriesString;
+private variable LabwareSequencesString;
+private variable Delimiter;
+private variable LabwareTypesString;
+private variable NamesString;
 // {{ 5 "Init" "InitLocals"
 // }} ""
-// {{ 138 1 0 "cfc823aa_8b1a_4380_a3ede14a7c7f10e6" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
-NumLabware=i_LabwareCommandStringsArray.GetSize();
+// {{ 138 1 0 "922b4592_6a48_4ffb_aab10a4f64994d34" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+
 // }} ""
-// {{ 139 1 0 "ed966ace_c005_4125_a77b59caa4b63b69" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateNames.SetSize(NumLabware);
+// {{{ 139 1 0 "3166dd27_cfd5_4d74_a58bd1e902fb984b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::ParseCommandParametersString(i_LabwareCommandString, Dict);
 // }} ""
-// {{ 140 1 0 "02184399_dbad_4547_83482e1e3e996c29" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateSequenceStrings.SetSize(NumLabware);
+// {{{ 140 1 0 "3357d8ac_3810_4e4f_8e5591382e6897b0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("Name"), NamesString);
 // }} ""
-// {{ 141 1 0 "3391a72a_ff74_41be_88ee3bcfad108ff8" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateVolumes.SetSize(NumLabware);
+// {{{ 141 1 0 "725838aa_56b6_4477_b50d5066830e69a4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LabwareSequence"), LabwareSequencesString);
 // }} ""
-// {{ 142 1 0 "2e8db627_d148_496b_b2025043085a840c" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateLabwareTypes.SetSize(NumLabware);
+// {{{ 142 1 0 "db1b0abc_adb1_461c_9d92535138459fe0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LidSequence"), LidSequencesString);
 // }} ""
-// {{ 143 1 0 "660c3ae8_6c04_4746_84092f04790a031d" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateLabwareNames.SetSize(NumLabware);
+// {{{ 143 1 0 "3562d87b_aa2e_4481_8b9650f4c67dcc49" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LoadingLocation"), LoadingLocationsString);
 // }} ""
-// {{ 144 1 0 "bb886e87_da6a_46d5_819a54db657df97a" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateLabwareCategories.SetSize(NumLabware);
+// {{{ 144 1 0 "98c00946_bcd5_4f10_b427bfe531161d91" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("Volume"), VolumesString);
 // }} ""
-// {{ 145 1 0 "583b0b03_0e24_4730_afb6a2732ebe0620" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-PlateLoadingLocations.SetSize(NumLabware);
+// {{{ 145 1 0 "ba06422c_0bbf_4040_99fef508f679d318" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LabwareType"), LabwareTypesString);
 // }} ""
-// {{ 146 1 0 "1d22061e_17a3_45dd_a22afb7d3e42086f" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-LidSequenceStrings.SetSize(NumLabware);
+// {{{ 146 1 0 "bff073fc_7881_4a61_b677d0a2689ae6c0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LabwareCategory"), LabwareCategoriesString);
 // }} ""
-// {{ 147 1 0 "724f8c93_b0d1_4032_8f6ecde86d5f5f6c" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
-{
-for(Counter = 0; Counter < NumLabware;)
-{
-Counter = Counter + 1;
+// {{{ 147 1 0 "20d07b90_bcb1_4456_b15664052928eabd" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+COMMANDS::GetDictionaryItem(Dict, Translate("LabwareName"), LabwareNamesString);
 // }} ""
-// {{{ 148 1 0 "504706a6_3ebf_4b91_a38dca387e925fd3" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::ParseCommandParametersString(i_LabwareCommandStringsArray.ElementAt( Counter -1), Dict);
+// {{ 148 1 0 "d97463ed_89e7_4a93_9f3d4ee852f3b6d6" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+
 // }} ""
-// {{{ 149 1 0 "96704428_af17_4a5b_91b0b0da09983453" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("Name"), PlateNames.ElementAt( Counter -1));
+// {{{ 149 1 0 "ea8623c9_278c_41e0_b43bfca7e3e04839" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+Delimiter = COMMANDS::GetCommandStringDelimiter();
 // }} ""
-// {{{ 150 1 0 "43dff32a_4251_478e_b01c28d4675e71ff" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LabwareSequence"), PlateSequenceStrings.ElementAt( Counter -1));
+// {{{ 150 1 0 "2a28a738_fb1c_49d1_8a02acfbd2035474" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, NamesString, PlateNames);
 // }} ""
-// {{{ 151 1 0 "61662e2e_4732_46ad_a4ac572930f4d10a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("Volume"), PlateVolumes.ElementAt( Counter -1));
+// {{{ 151 1 0 "50d0994a_3ca6_41ef_b81cc6ae28aeacb7" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LabwareSequencesString, PlateSequenceStrings);
 // }} ""
-// {{{ 152 1 0 "5e8ae2e9_da6f_4792_8b55ef306ec85562" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LabwareType"), PlateLabwareTypes.ElementAt( Counter -1));
+// {{{ 152 1 0 "c09c27bc_84ec_455a_b473b35140598399" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, VolumesString, PlateVolumes);
 // }} ""
-// {{{ 153 1 0 "0c0a4393_8ee6_43bc_bcaed3146fda8d7b" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LabwareName"), PlateLabwareNames.ElementAt( Counter -1));
+// {{{ 153 1 0 "562dc6d8_cf89_4324_8a70352145f2f865" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LabwareTypesString, PlateLabwareTypes);
 // }} ""
-// {{{ 154 1 0 "ad6ad9b4_d193_4cf9_afdcae33352e18ef" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LabwareCategory"), PlateLabwareCategories.ElementAt( Counter -1));
+// {{{ 154 1 0 "23f18814_4df0_4fd2_b8c522a7d8a299af" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LabwareNamesString, PlateLabwareNames);
 // }} ""
-// {{{ 155 1 0 "2a782ae5_451c_470f_815be03b685b4d0e" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LoadingLocation"), PlateLoadingLocations.ElementAt( Counter -1));
+// {{{ 155 1 0 "776c296d_010c_4144_9ad49d23bc518e11" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LabwareCategoriesString, PlateLabwareCategories);
 // }} ""
-// {{{ 156 1 0 "b7dd22d8_69b6_4352_ab2e5d94f358d286" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-COMMANDS::GetDictionaryItem(Dict, Translate("LidSequence"), LidSequenceStrings.ElementAt( Counter -1));
+// {{{ 156 1 0 "07f7f9bd_9986_4060_92a094f2c71ff805" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LoadingLocationsString, PlateLoadingLocations);
 // }} ""
-// {{ 157 1 0 "724f8c93_b0d1_4032_8f6ecde86d5f5f6c" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
-}
-}
+// {{{ 157 1 0 "1e1a1713_1b92_4b35_bd6391353e3f9a47" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+TOOLS::ParseDelimitedList(Delimiter, LidSequencesString, PlateLidSequenceStrings);
 // }} ""
 // {{{ 158 1 0 "db03e167_3e3a_44bb_9791df0cb8bb5e61" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Util2::Debug::TraceArray(Translate(""), PlateNames);
@@ -727,8 +728,8 @@ Util2::Debug::TraceArray(Translate(""), PlateLabwareCategories);
 // {{{ 164 1 0 "90c380c1_d263_4914_abcaf693b2e0bc81" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Util2::Debug::TraceArray(Translate(""), PlateLoadingLocations);
 // }} ""
-// {{{ 165 1 0 "66baff93_c74f_4cae_9cbfea06deea62f3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-Util2::Debug::TraceArray(Translate(""), LidSequenceStrings);
+// {{{ 165 1 0 "022bde67_3956_4f8f_a7ca1a65b27fec22" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+Util2::Debug::TraceArray(Translate(""), PlateLidSequenceStrings);
 // }} ""
 // {{{ 5 "Init" "End"
 }
@@ -737,4 +738,4 @@ Util2::Debug::TraceArray(Translate(""), LidSequenceStrings);
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-12-07 10:37$$checksum=ef623d28$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-12-09 14:04$$checksum=84781efc$$length=084$$

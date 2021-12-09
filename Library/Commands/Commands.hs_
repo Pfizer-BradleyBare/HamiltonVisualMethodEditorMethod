@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 12/9/2021 9:34:38 AM
+// Generated at 12/9/2021 1:23:16 PM
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -8,10 +8,10 @@ namespace COMMANDS {
 function _InitLibrary() { }
 function _ExitLibrary() { }
 function GetCommand( variable & CommandStringArray[] ) void { }
-function GetCommandStringCommand( variable & i_CommandStringArray[] ) variable {  return (0); }
+function GetCommandStringCommand( variable i_CommandString ) variable {  return (0); }
 function GetCommandStringDelimiter(  ) variable {  return (0); }
-function GetCommandStringModule( variable & i_CommandStringArray[] ) variable {  return (0); }
-function GetCommandStringParameterStringsArray( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void { }
+function GetCommandStringModule( variable i_CommandString ) variable {  return (0); }
+function GetCommandStringParameterStringsArrayOLD( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void { }
 function GetDictionaryItem( variable & i_Dictionary[], variable InputKey, variable & OutputValue ) void { }
 function ParseCommandParametersString( variable InputCommand, variable & OutputDictionary[] ) void { }
 function StartSystem(  ) void { }
@@ -22,4 +22,4 @@ function WriteResponse( variable ResponseString ) void { }
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2021-12-09 09:34$$checksum=b8599333$$length=082$$
+// $$author=BAREB$$valid=0$$time=2021-12-09 13:23$$checksum=af402181$$length=082$$

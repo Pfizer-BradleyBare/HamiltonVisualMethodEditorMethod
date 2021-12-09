@@ -19,10 +19,10 @@ namespace COMMANDS {
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function GetCommand( variable & CommandStringArray[] ) void ;
-function GetCommandStringCommand( variable & i_CommandStringArray[] ) variable ;
+function GetCommandStringCommand( variable i_CommandString ) variable ;
 function GetCommandStringDelimiter(  ) variable ;
-function GetCommandStringModule( variable & i_CommandStringArray[] ) variable ;
-function GetCommandStringParameterStringsArray( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void ;
+function GetCommandStringModule( variable i_CommandString ) variable ;
+function GetCommandStringParameterStringsArrayOLD( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void ;
 function GetDictionaryItem( variable & i_Dictionary[], variable InputKey, variable & OutputValue ) void ;
 function ParseCommandParametersString( variable InputCommand, variable & OutputDictionary[] ) void ;
 function StartSystem(  ) void ;
@@ -424,14 +424,14 @@ abort;
 // {{{ 5 "GetDictionaryItem" "End"
 }
 // }} ""
-// {{{ 5 "GetCommandStringParameterStringsArray" "Begin"
-function GetCommandStringParameterStringsArray( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void {
+// {{{ 5 "GetCommandStringParameterStringsArrayOLD" "Begin"
+function GetCommandStringParameterStringsArrayOLD( variable & i_CommandStringArray[], variable & o_ParameterStringsArray[] ) void {
 // }} ""
 private variable Counter;
 private variable CommandArraySize;
 private variable Index;
 private variable NumParameters;
-// {{ 5 "GetCommandStringParameterStringsArray" "InitLocals"
+// {{ 5 "GetCommandStringParameterStringsArrayOLD" "InitLocals"
 o_ParameterStringsArray.SetSize( 0);
 // }} ""
 // {{ 45 1 0 "74a8762a_c1e3_4c3f_8a631f579b9f7ea1" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
@@ -459,7 +459,7 @@ o_ParameterStringsArray.AddAsLast(i_CommandStringArray.ElementAt( Index -1));
 }
 }
 // }} ""
-// {{{ 5 "GetCommandStringParameterStringsArray" "End"
+// {{{ 5 "GetCommandStringParameterStringsArrayOLD" "End"
 }
 // }} ""
 // {{{ 5 "GetCommand" "Begin"
@@ -616,14 +616,14 @@ FilDeleteFileEx(FilePath);
 }
 // }} ""
 // {{{ 5 "GetCommandStringCommand" "Begin"
-function GetCommandStringCommand( variable & i_CommandStringArray[] ) variable {
+function GetCommandStringCommand( variable i_CommandString ) variable {
 // }} ""
 private variable CommandOutput;
 private variable Dict[];
 // {{ 5 "GetCommandStringCommand" "InitLocals"
 // }} ""
-// {{{ 35 1 0 "7eac77f8_c9d8_4336_86f685f7743c1af4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ParseCommandParametersString(i_CommandStringArray.ElementAt( 2 -1), Dict);
+// {{{ 35 1 0 "51a21b83_1dab_4dab_9b9f4c136769e086" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ParseCommandParametersString(i_CommandString, Dict);
 // }} ""
 // {{{ 36 1 0 "1bf7b89a_03e3_43ee_813d6c3f0f3ed400" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 GetDictionaryItem(Dict, Translate("Command"), CommandOutput);
@@ -635,14 +635,14 @@ return (CommandOutput);
 }
 // }} ""
 // {{{ 5 "GetCommandStringModule" "Begin"
-function GetCommandStringModule( variable & i_CommandStringArray[] ) variable {
+function GetCommandStringModule( variable i_CommandString ) variable {
 // }} ""
 private variable ModuleOutput;
 private variable Dict[];
 // {{ 5 "GetCommandStringModule" "InitLocals"
 // }} ""
-// {{{ 41 1 0 "ff89d96a_5c42_4f3a_898eafa86ea1cf4c" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-ParseCommandParametersString(i_CommandStringArray.ElementAt( 1 -1), Dict);
+// {{{ 41 1 0 "a8893d7f_b0a8_4087_a67e89e2660bb65c" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+ParseCommandParametersString(i_CommandString, Dict);
 // }} ""
 // {{{ 42 1 0 "0b79f890_be16_4a17_947bac1d6938a808" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 GetDictionaryItem(Dict, Translate("Module"), ModuleOutput);
@@ -668,4 +668,4 @@ return (Translate(",,,"));
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-12-09 09:34$$checksum=09bf694c$$length=084$$
+// $$author=BAREB$$valid=0$$time=2021-12-09 13:23$$checksum=a5e3d9d7$$length=084$$
