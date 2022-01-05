@@ -1,12 +1,13 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 12/8/2021 10:52:45 AM
+// Generated at 1/5/2022 3:05:28 PM
 
 #pragma once
 #ifndef HSL_RUNTIME
 namespace TOOLS {
 function _InitLibrary() { }
 function _ExitLibrary() { }
+function AddArrays( variable & NumberArray1[], variable & NumberArray2[], variable & o_SummedArray[] ) void { }
 function ArrayToDelimitedList( variable Delimiter, variable & StringsArray[] ) variable {  return (0); }
 function IsInArray( variable SearchValue, variable & Array[] ) variable {  return (0); }
 function ParseDelimitedList( variable Delimiter, variable String, variable & OutputArray[] ) void { }
@@ -19,4 +20,4 @@ function StringArrayToIntArray( variable & i_StringArray[], variable & o_IntArra
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2021-12-08 10:52$$checksum=e64fed95$$length=082$$
+// $$author=BAREB$$valid=0$$time=2022-01-05 15:05$$checksum=dbff95a2$$length=082$$
