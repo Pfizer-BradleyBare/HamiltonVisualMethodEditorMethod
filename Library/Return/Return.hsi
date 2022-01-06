@@ -51,8 +51,8 @@ TOOLS::ParseDelimitedList(Translate(","), AdditionalReturnItemMessages, ReturnIt
 // {{ 3 1 0 "e09ed5da_e08e_4d83_8cd12bc726a3b421" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ReturnString = Translate("");
 // }} ""
-// {{{ 4 1 0 "b8a44e7f_f5f2_41cb_a73cc35136f53b91" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-ReturnID = StrIVal(ReturnID);
+// {{{ 4 1 0 "7e628982_cc99_4fc5_be3b3d5b573e6af8" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ReturnID = StrIStr(ReturnID);
 // }} ""
 // {{{ 5 1 0 "e897bb39_305d_48c1_92837d14934a0042" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 ReturnString = StrConcat4(ReturnString, Translate("[FuncReturnID]"), ReturnID, Translate(""));
@@ -162,4 +162,4 @@ return (SuccessFlag);
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2021-12-07 14:17$$checksum=6297c627$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-01-06 09:32$$checksum=b11bbd1a$$length=084$$
