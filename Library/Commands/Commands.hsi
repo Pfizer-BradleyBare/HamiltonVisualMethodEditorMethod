@@ -673,8 +673,8 @@ function GetCommandStringDelimiter(  ) variable {
 // }} ""
 // {{ 5 "GetCommandStringDelimiter" "InitLocals"
 // }} ""
-// {{{ 40 1 0 "43e9f117_5568_449d_bf30b518763a05f5" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (Translate(",,,"));
+// {{{ 40 1 0 "cc2af346_debe_49c2_931f277a318aedf8" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate(";;;"));
 // }} ""
 // {{{ 5 "GetCommandStringDelimiter" "End"
 }
@@ -683,4 +683,4 @@ return (Translate(",,,"));
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-01-06 12:46$$checksum=61223e4e$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-01-07 14:24$$checksum=f4a0ba23$$length=084$$
