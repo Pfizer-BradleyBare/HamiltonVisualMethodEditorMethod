@@ -1,0 +1,111 @@
+// {{{ 2 "IncludeGuard" "PragmaOnce"
+#pragma once
+// }} ""
+/* {{ 2 "LibraryInsertLine" "" */ // }} ""
+// {{ 2 "TemplateIncludeBlock" ""
+#include "HSLMETEDLib.hs_"
+#include "HSLMECCLib.hs_"
+// }} ""
+// {{{ 2 "LibraryNamespace" "Begin"
+namespace RETURNIDS {
+// }} ""
+/* {{ 2 "VariableInsertLine" "" */ // }} ""
+// {{{ 2 "SubmethodForwardDeclaration" ""
+function FailCritical(  ) variable ;
+function FailIncorrectInfo(  ) variable ;
+function FailNotEnoughParams(  ) variable ;
+function FailNotPossible(  ) variable ;
+function SuccessItemsReturned(  ) variable ;
+function SuccessNoErrors(  ) variable ;
+function SuccessRequestSkipped(  ) variable ;
+// }} ""
+function _InitLibrary() {
+// {{ 2 "AutoInitBlock" ""
+// }} ""
+}
+function _ExitLibrary() {
+// {{ 2 "AutoExitBlock" ""
+// }} ""
+}
+// {{{ 5 "SuccessNoErrors" "Begin"
+function SuccessNoErrors(  ) variable {
+// }} ""
+// {{ 5 "SuccessNoErrors" "InitLocals"
+// }} ""
+// {{{ 11 1 0 "ce90950a_8869_451d_b4c341d9e94bdbda" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (0);
+// }} ""
+// {{{ 5 "SuccessNoErrors" "End"
+}
+// }} ""
+// {{{ 5 "SuccessRequestSkipped" "Begin"
+function SuccessRequestSkipped(  ) variable {
+// }} ""
+// {{ 5 "SuccessRequestSkipped" "InitLocals"
+// }} ""
+// {{{ 13 1 0 "2d9dfc15_b137_4eaa_85af4ec6eef063ec" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (1);
+// }} ""
+// {{{ 5 "SuccessRequestSkipped" "End"
+}
+// }} ""
+// {{{ 5 "SuccessItemsReturned" "Begin"
+function SuccessItemsReturned(  ) variable {
+// }} ""
+// {{ 5 "SuccessItemsReturned" "InitLocals"
+// }} ""
+// {{{ 9 1 0 "a2f5bd19_fe22_45b8_ac503c2d4858273d" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (2);
+// }} ""
+// {{{ 5 "SuccessItemsReturned" "End"
+}
+// }} ""
+// {{{ 5 "FailNotEnoughParams" "Begin"
+function FailNotEnoughParams(  ) variable {
+// }} ""
+// {{ 5 "FailNotEnoughParams" "InitLocals"
+// }} ""
+// {{{ 5 1 0 "71a2bab7_5f8d_4db6_914938f4651b0fd0" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (-1);
+// }} ""
+// {{{ 5 "FailNotEnoughParams" "End"
+}
+// }} ""
+// {{{ 5 "FailIncorrectInfo" "Begin"
+function FailIncorrectInfo(  ) variable {
+// }} ""
+// {{ 5 "FailIncorrectInfo" "InitLocals"
+// }} ""
+// {{{ 3 1 0 "f4af1520_533b_4804_bc057e495a6517f9" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (-2);
+// }} ""
+// {{{ 5 "FailIncorrectInfo" "End"
+}
+// }} ""
+// {{{ 5 "FailCritical" "Begin"
+function FailCritical(  ) variable {
+// }} ""
+// {{ 5 "FailCritical" "InitLocals"
+// }} ""
+// {{{ 1 1 0 "8278f66a_c90d_4511_aefbf3cd0e42133c" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (-3);
+// }} ""
+// {{{ 5 "FailCritical" "End"
+}
+// }} ""
+// {{{ 5 "FailNotPossible" "Begin"
+function FailNotPossible(  ) variable {
+// }} ""
+// {{ 5 "FailNotPossible" "InitLocals"
+// }} ""
+// {{{ 7 1 0 "6856c29c_1462_428a_8b4fce80b816412d" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (-4);
+// }} ""
+// {{{ 5 "FailNotPossible" "End"
+}
+// }} ""
+/* {{ 2 "SubmethodInsertLine" "" */ // }} ""
+// {{{ 2 "LibraryNamespace" "End"
+} // library namespace
+// }} ""
+// $$author=BAREB$$valid=0$$time=2022-01-07 10:52$$checksum=24a1ffe9$$length=084$$

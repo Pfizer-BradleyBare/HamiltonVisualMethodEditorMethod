@@ -1,0 +1,23 @@
+
+// this ALWAYS GENERATED file contains the sub-method library header
+// Generated at 1/7/2022 10:52:12 AM
+
+#pragma once
+#ifndef HSL_RUNTIME
+namespace RETURNIDS {
+function _InitLibrary() { }
+function _ExitLibrary() { }
+function FailCritical(  ) variable {  return (0); }
+function FailIncorrectInfo(  ) variable {  return (0); }
+function FailNotEnoughParams(  ) variable {  return (0); }
+function FailNotPossible(  ) variable {  return (0); }
+function SuccessItemsReturned(  ) variable {  return (0); }
+function SuccessNoErrors(  ) variable {  return (0); }
+function SuccessRequestSkipped(  ) variable {  return (0); }
+} // namespace
+#endif
+
+#ifdef HSL_RUNTIME
+#include __filename__ ".hsi"
+#endif
+// $$author=BAREB$$valid=0$$time=2022-01-07 10:52$$checksum=70311486$$length=082$$
