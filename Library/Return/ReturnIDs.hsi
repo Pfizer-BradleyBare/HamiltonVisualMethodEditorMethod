@@ -32,8 +32,8 @@ function SuccessNoErrors(  ) variable {
 // }} ""
 // {{ 5 "SuccessNoErrors" "InitLocals"
 // }} ""
-// {{{ 11 1 0 "ce90950a_8869_451d_b4c341d9e94bdbda" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (0);
+// {{{ 11 1 0 "1698c344_418a_412f_ae34eeb00333c917" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("0"));
 // }} ""
 // {{{ 5 "SuccessNoErrors" "End"
 }
@@ -43,8 +43,8 @@ function SuccessRequestSkipped(  ) variable {
 // }} ""
 // {{ 5 "SuccessRequestSkipped" "InitLocals"
 // }} ""
-// {{{ 13 1 0 "2d9dfc15_b137_4eaa_85af4ec6eef063ec" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (1);
+// {{{ 13 1 0 "64844c99_db7d_4fa4_a489fc0f4e8a3cdf" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("1"));
 // }} ""
 // {{{ 5 "SuccessRequestSkipped" "End"
 }
@@ -54,8 +54,8 @@ function SuccessItemsReturned(  ) variable {
 // }} ""
 // {{ 5 "SuccessItemsReturned" "InitLocals"
 // }} ""
-// {{{ 9 1 0 "a2f5bd19_fe22_45b8_ac503c2d4858273d" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (2);
+// {{{ 9 1 0 "6fa58679_6e4f_4155_9e515c9ea1c51471" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("2"));
 // }} ""
 // {{{ 5 "SuccessItemsReturned" "End"
 }
@@ -65,8 +65,8 @@ function FailNotEnoughParams(  ) variable {
 // }} ""
 // {{ 5 "FailNotEnoughParams" "InitLocals"
 // }} ""
-// {{{ 5 1 0 "71a2bab7_5f8d_4db6_914938f4651b0fd0" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (-1);
+// {{{ 5 1 0 "73ab1961_c552_4d2d_a0314a0ef1454f92" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("-1"));
 // }} ""
 // {{{ 5 "FailNotEnoughParams" "End"
 }
@@ -76,8 +76,8 @@ function FailIncorrectInfo(  ) variable {
 // }} ""
 // {{ 5 "FailIncorrectInfo" "InitLocals"
 // }} ""
-// {{{ 3 1 0 "f4af1520_533b_4804_bc057e495a6517f9" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (-2);
+// {{{ 3 1 0 "d9dba9c9_6889_47e2_b70b84284c09d38d" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("-2"));
 // }} ""
 // {{{ 5 "FailIncorrectInfo" "End"
 }
@@ -87,8 +87,8 @@ function FailCritical(  ) variable {
 // }} ""
 // {{ 5 "FailCritical" "InitLocals"
 // }} ""
-// {{{ 1 1 0 "8278f66a_c90d_4511_aefbf3cd0e42133c" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (-3);
+// {{{ 1 1 0 "6f1e7f50_c7d1_4611_8f2208fce50ace95" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("-3"));
 // }} ""
 // {{{ 5 "FailCritical" "End"
 }
@@ -98,8 +98,8 @@ function FailNotPossible(  ) variable {
 // }} ""
 // {{ 5 "FailNotPossible" "InitLocals"
 // }} ""
-// {{{ 7 1 0 "6856c29c_1462_428a_8b4fce80b816412d" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
-return (-4);
+// {{{ 7 1 0 "6fed7cdb_28e6_4e1f_bcf29bc163cf2c2e" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return (Translate("-4"));
 // }} ""
 // {{{ 5 "FailNotPossible" "End"
 }
@@ -108,4 +108,4 @@ return (-4);
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-01-07 10:52$$checksum=24a1ffe9$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-01-19 09:17$$checksum=bfa080ce$$length=084$$
