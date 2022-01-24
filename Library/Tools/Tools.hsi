@@ -397,11 +397,11 @@ private variable Counter;
 // {{ 5 "AddArrays" "InitLocals"
 o_SummedArray.SetSize( 0);
 // }} ""
-// {{ 1 1 0 "8e46e8be_7b23_4a1b_9af92114ff0ee9d1" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
-o_SummedArray.SetSize(0);
-// }} ""
-// {{ 2 1 0 "fb7f891d_93f0_43ae_b9ac36758a15ddfd" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
+// {{ 1 1 0 "fb7f891d_93f0_43ae_b9ac36758a15ddfd" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
 NumItems=NumberArray1.GetSize();
+// }} ""
+// {{ 2 1 0 "999017ad_877c_49fd_9446a6a94f5e5306" "{4900C1F7-0FB7-4033-8253-760BDB9354DC}"
+o_SummedArray.SetSize(NumItems);
 // }} ""
 // {{ 3 1 0 "b6917941_0fb9_45c8_91c76cc79502c986" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
 {
@@ -423,4 +423,4 @@ o_SummedArray[ Counter -1] = NumberArray1.ElementAt( Counter -1) + NumberArray2.
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-01-05 15:05$$checksum=894ed23c$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-01-24 13:06$$checksum=8db07990$$length=084$$

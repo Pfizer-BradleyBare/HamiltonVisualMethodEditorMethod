@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 1/5/2022 3:05:28 PM
+// Generated at 1/24/2022 1:06:34 PM
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -20,4 +20,4 @@ function StringArrayToIntArray( variable & i_StringArray[], variable & o_IntArra
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2022-01-05 15:05$$checksum=dbff95a2$$length=082$$
+// $$author=BAREB$$valid=0$$time=2022-01-24 13:06$$checksum=eba2b252$$length=082$$
