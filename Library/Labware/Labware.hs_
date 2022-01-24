@@ -1,12 +1,13 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 1/18/2022 12:01:57 PM
+// Generated at 1/21/2022 2:38:29 PM
 
 #pragma once
 #ifndef HSL_RUNTIME
 namespace LABWARE {
 function _InitLibrary() { }
 function _ExitLibrary() { }
+function DoCommand( device & ML_STAR, variable i_CommandString ) variable {  return (0); }
 function GetAllSequenceStrings( variable & SequenceStrings[] ) void { }
 function GetPlateLabwareCategory( variable & PlateNamesArray[], variable & LabwareCategoriesArray[] ) variable {  return (0); }
 function GetPlateLabwareName( variable & PlateNamesArray[], variable & LabwareNamesArray[] ) variable {  return (0); }
@@ -23,4 +24,4 @@ function Init( variable i_LabwareCommandString ) void { }
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2022-01-18 12:01$$checksum=066ec042$$length=082$$
+// $$author=BAREB$$valid=0$$time=2022-01-21 14:38$$checksum=88736255$$length=082$$
