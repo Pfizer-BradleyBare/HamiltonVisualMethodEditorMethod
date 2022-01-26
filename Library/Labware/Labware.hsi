@@ -860,8 +860,8 @@ Delimiter = COMMANDS::GetCommandStringDelimiter();
 // {{{ 95 1 0 "0fb2f206_b96a_49f4_98ea6027c27bfd33" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 TOOLS::ParseDelimitedList(Delimiter, PlateNamesString, PlateNameStringsArray);
 // }} ""
-// {{{ 96 1 0 "102a5632_e5a6_4a02_928a95ad63184ad4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-GetPlateLabwareType(PlateNameStringsArray, Output);
+// {{{ 96 1 0 "8ab69111_c715_49f4_9f9be2869242a80e" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+GetPlateLabwareName(PlateNameStringsArray, Output);
 // }} ""
 // {{{ 97 1 0 "c6f0e97e_4115_45bf_9abb2231b2c51793" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ReturnVal = TOOLS::ArrayToDelimitedList(Delimiter, Output);
@@ -1000,4 +1000,4 @@ PlateVolumes.AddAsLast(PlateVolume);
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-01-25 15:07$$checksum=efc7622d$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-01-26 13:07$$checksum=1cd47718$$length=084$$
