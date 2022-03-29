@@ -21,7 +21,6 @@
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\ReturnIDs.hs_" } 
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\Return.hs_" } 
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\PfizerTools\\PfizerToolsVCurrent.hs_" } 
-#include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.res"
  namespace _Method { #include "HSLDevLib.hsl" } 
  namespace _UserInformationProcess { #include "HSLStrLib.hsl" } 
  namespace _UserInformationProcess { #include "ASWStandardDialogs\\ASWStandardDialogs.hsl" } 
@@ -47,6 +46,7 @@
  namespace _UserInformationProcess { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\Return.hs_" } 
  namespace _UserInformationProcess { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\PfizerTools\\PfizerToolsVCurrent.hs_" } 
  namespace _UserInformationProcess { #include "HSLDevLib.hsl" } 
+#include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 variable Out;
 variable Command[];
@@ -82,12 +82,8 @@ dialog customDialog650AFCADE803425cA7B41D16AC38741A;
 variable ParseNumeric;
 variable loopCounter5;
 variable ParseAlpha;
-variable HeaterDialogProcess;
 variable _TEST_LIST[];
 variable loopCounter1;
-variable _ASYNC_PROCESS_HeaterDialogProcess_RunFlag;
-event HeaterProcessBegin;
-dialog customDialogE9A494D0915A4e8a85BB77DA4BA5BA66;
 dialog customDialog5201DEA262654cf9A3A417DB9D3D54D8;
 event _ASYNC_PROCESS_USER_INFORMATION_Start;
 variable UserInformationProcess;
@@ -1068,4 +1064,4 @@ PFIZERTOOLSVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-03-28 14:47$$checksum=17add359$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-03-28 18:27$$checksum=2fdc786d$$length=084$$

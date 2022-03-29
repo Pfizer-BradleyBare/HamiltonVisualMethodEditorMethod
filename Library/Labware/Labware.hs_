@@ -1,6 +1,6 @@
 
 // this ALWAYS GENERATED file contains the sub-method library header
-// Generated at 1/26/2022 1:07:28 PM
+// Generated at 3/29/2022 9:16:40 AM
 
 #pragma once
 #ifndef HSL_RUNTIME
@@ -19,10 +19,19 @@ function GetPlateNames( variable & o_PlateNames[] ) void { }
 function GetPlateSequenceString( variable & PlateNamesArray[], variable & PlateSequenceStringsArray[] ) variable {  return (0); }
 function GetPlateVolume( variable & PlateNamesArray[], variable & PlateVolumesArray[] ) variable {  return (0); }
 function Init( variable i_LabwareCommandString ) void { }
+global variable _LIBRARY_LABWARE_PlateNames[];
+global variable _LIBRARY_LABWARE_PlateSequenceStrings[];
+global variable _LIBRARY_LABWARE_PlateLidSequenceStrings[];
+global variable _LIBRARY_LABWARE_PlateLoadingLocations[];
+global variable _LIBRARY_LABWARE_PlateLabwareNames[];
+global variable _LIBRARY_LABWARE_PlateLabwareCategories[];
+global variable _LIBRARY_LABWARE_PlateLabwareTypes[];
+global variable _LIBRARY_LABWARE_PlateVolumes[];
+global variable _LIBRARY_LABWARE_IsInit("False");
 } // namespace
 #endif
 
 #ifdef HSL_RUNTIME
 #include __filename__ ".hsi"
 #endif
-// $$author=BAREB$$valid=0$$time=2022-01-26 13:07$$checksum=1973ad4b$$length=082$$
+// $$author=BAREB$$valid=0$$time=2022-03-29 09:16$$checksum=4c97b89f$$length=082$$

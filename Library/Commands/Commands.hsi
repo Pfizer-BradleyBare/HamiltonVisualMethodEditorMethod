@@ -17,7 +17,7 @@
 // {{{ 2 "LibraryNamespace" "Begin"
 namespace COMMANDS {
 // }} ""
-variable CollectedResponses;
+global variable _LIBRARY_COMMANDS_CollectedResponses;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{{ 2 "SubmethodForwardDeclaration" ""
 function CollectResponse( variable ReturnString ) void ;
@@ -66,8 +66,8 @@ TrcTrace(Translate("********************** Give Response ***********************
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
 /* {{ 1 "" "1" */ } /* }} "" */
-// {{{ 188 1 0 "10599804_3033_430f_9805517e131d558e" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-CollectedResponses = StrConcat2(CollectedResponses, Translate("]"));
+// {{{ 188 1 0 "4116def8_3fa8_4203_84ebfd8fb2c662eb" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+_LIBRARY_COMMANDS_CollectedResponses = StrConcat2(_LIBRARY_COMMANDS_CollectedResponses, Translate("]"));
 // }} ""
 // {{{ 189 1 0 "15c3b74a_3a33_4bb0_94690cc9810c67b0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 PythonRootPath = SCRIPT::GetPythonRootPath();
@@ -78,8 +78,8 @@ ScriptRootPath = SCRIPT::GetScriptRootPath();
 // {{{ 191 1 0 "a55a827b_52ea_4392_83bb03db40b61ac3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 FilePath = StrConcat2(ScriptRootPath, Translate("\\CommunicationFolder\\Temp_Response.txt"));
 // }} ""
-// {{ 192 1 0 "2c9f8aee_508e_4db2_b163a80c6555033b" "{B31F3534-5D80-11d4-A5EB-0050DA737D89}"
-ResponseFile.AddField(1, CollectedResponses, hslString);
+// {{ 192 1 0 "0734eeda_c45c_4696_b88c1864a8672a70" "{B31F3534-5D80-11d4-A5EB-0050DA737D89}"
+ResponseFile.AddField(1, _LIBRARY_COMMANDS_CollectedResponses, hslString);
 ResponseFile.SetDelimiter(hslAsciiText);
 if( 0 == ResponseFile.Open(FilePath, hslWrite) )
 {
@@ -633,8 +633,8 @@ FilDeleteFileEx(FilePath);
 // {{ 72 1 0 "6e5e3ca4_cfc4_4a9f_bb872bd62b4e434b" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 73 1 0 "dc1bac05_bd0e_450b_ab6d6a4886cdb0e9" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-CollectedResponses = Translate("");
+// {{ 73 1 0 "c2c4e7ed_b672_4b72_a4f3c82ff01e6dd4" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+_LIBRARY_COMMANDS_CollectedResponses = Translate("");
 // }} ""
 // {{{ 5 "GetCommand" "End"
 }
@@ -699,22 +699,22 @@ private variable Counter;
 private variable ResponseItem;
 // {{ 5 "CollectResponse" "InitLocals"
 // }} ""
-// {{ 1 1 0 "55948b1d_e276_42c1_aa5d177a82dd8910" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
-if (CollectedResponses == "")
+// {{ 1 1 0 "c2a4acdb_aa20_4caa_9209f9bf6e58baa8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (_LIBRARY_COMMANDS_CollectedResponses == "")
 {
 // }} ""
-// {{{ 2 1 0 "fcdfdae4_9a54_4595_a285ca3465449cf8" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-CollectedResponses = StrConcat2(CollectedResponses, Translate("["));
+// {{{ 2 1 0 "23bcf49e_94f2_4515_a2b65804330caf9b" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+_LIBRARY_COMMANDS_CollectedResponses = StrConcat2(_LIBRARY_COMMANDS_CollectedResponses, Translate("["));
 // }} ""
-// {{ 3 1 0 "55948b1d_e276_42c1_aa5d177a82dd8910" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 3 1 0 "c2a4acdb_aa20_4caa_9209f9bf6e58baa8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 else
 {
 // }} ""
-// {{{ 4 1 0 "d201b6b3_ea5a_4e26_bde37dc2ff44c6ab" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-CollectedResponses = StrConcat2(CollectedResponses, Translate(","));
+// {{{ 4 1 0 "75864429_e6ff_457f_86225a2696e4ffd0" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+_LIBRARY_COMMANDS_CollectedResponses = StrConcat2(_LIBRARY_COMMANDS_CollectedResponses, Translate(","));
 // }} ""
-// {{ 5 1 0 "55948b1d_e276_42c1_aa5d177a82dd8910" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 5 1 0 "c2a4acdb_aa20_4caa_9209f9bf6e58baa8" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
 // {{{ 6 1 0 "f9474bbf_becf_47c2_a487dd040daa11ca" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
@@ -761,8 +761,8 @@ ResponseItem = StrConcat2(ResponseItem, Translate(","));
 // {{{ 18 1 0 "c21a4ac9_9c1d_45d0_908935a242d9b9ca" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 ResponseItem = StrConcat2(ResponseItem, Translate("}"));
 // }} ""
-// {{{ 19 1 0 "812ce3f9_c766_456b_9f2ac82410387cac" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
-CollectedResponses = StrConcat2(CollectedResponses, ResponseItem);
+// {{{ 19 1 0 "ac8f4446_deac_4558_bf1727af1f6dad37" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+_LIBRARY_COMMANDS_CollectedResponses = StrConcat2(_LIBRARY_COMMANDS_CollectedResponses, ResponseItem);
 // }} ""
 // {{{ 5 "CollectResponse" "End"
 }
@@ -796,8 +796,8 @@ GetCommand(Command);
 // {{ 26 1 0 "20778803_7a89_4a7e_b67648a1db03e1c0" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 27 1 0 "5bb10816_b237_4751_b2163fa4fbcdc72b" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-CollectedResponses = Translate("[");
+// {{ 27 1 0 "09f9b86a_47e6_4b84_839392eea21c66bf" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+_LIBRARY_COMMANDS_CollectedResponses = Translate("[");
 // }} ""
 // {{{ 28 1 0 "9b6370b3_581b_4361_b0e21797a361dedd" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 WriteResponse();
@@ -821,8 +821,8 @@ loopCounter3 = loopCounter3 + 1;
 // {{{ 33 1 0 "7bf5a49f_a536_45e1_b6ccae81346ba3d0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 GetCommand(Command);
 // }} ""
-// {{ 34 1 0 "8ffdba99_d224_45d0_a67654b9e73abb6f" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
-CollectedResponses = Translate("[");
+// {{ 34 1 0 "35050742_4062_4255_af084f7a76b519cb" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+_LIBRARY_COMMANDS_CollectedResponses = Translate("[");
 // }} ""
 // {{{ 35 1 0 "54888d19_917f_403d_b32b6ca3fc9c7048" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 WriteResponse();
@@ -841,4 +841,4 @@ WriteResponse();
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=fcnchvgrd-pdami$$valid=0$$time=2022-01-26 15:43$$checksum=69014d78$$length=094$$
+// $$author=BAREB$$valid=0$$time=2022-03-29 09:09$$checksum=389a1652$$length=084$$
