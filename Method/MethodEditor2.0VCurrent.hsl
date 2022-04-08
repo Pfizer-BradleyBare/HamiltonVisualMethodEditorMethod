@@ -21,7 +21,6 @@
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\ReturnIDs.hs_" } 
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\Return.hs_" } 
  namespace _Method { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\PfizerTools\\PfizerToolsVCurrent.hs_" } 
- namespace _Method { #include "HSLDevLib.hsl" } 
  namespace _UserInformationProcess { #include "HSLStrLib.hsl" } 
  namespace _UserInformationProcess { #include "ASWStandardDialogs\\ASWStandardDialogs.hsl" } 
  namespace _UserInformationProcess { #include "HSLUtilLib.hsl" } 
@@ -45,7 +44,6 @@
  namespace _UserInformationProcess { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\ReturnIDs.hs_" } 
  namespace _UserInformationProcess { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\Return\\Return.hs_" } 
  namespace _UserInformationProcess { #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\PfizerTools\\PfizerToolsVCurrent.hs_" } 
- namespace _UserInformationProcess { #include "HSLDevLib.hsl" } 
 #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Deck Layout\\Pfizer Deck Layout Method Maker vCurrent.res"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 variable Out;
@@ -1064,4 +1062,4 @@ PFIZERTOOLSVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-03-28 18:27$$checksum=2fdc786d$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-04-05 18:21$$checksum=86ad1b68$$length=084$$
