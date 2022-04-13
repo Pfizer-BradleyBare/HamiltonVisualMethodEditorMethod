@@ -547,11 +547,11 @@ ReturnString = STATUSUPDATE::Init(ML_STAR, CommandString);
 // {{ 94 1 0 "281b426b_d138_440a_87f22510b3ef87c1" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 95 1 0 "71eee36f_54c8_4551_9c4c3df38d33a9db" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 95 1 0 "c1c981b8_a357_4289_922af601dca9afd9" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 96 1 0 "95fa9599_776c_4467_acb9e90a910c5a32" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
-if (ModuleCommand == "Desalt")
+// {{ 96 1 0 "c181bb46_c834_4264_867793cf56bbd8ea" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (ModuleCommand == "IMCS SizeX Desalt")
 {
 // }} ""
 // {{{ 97 1 0 "63264826_480f_48f5_b560d7e7e9daef49" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
@@ -560,10 +560,10 @@ ID = RETURNIDS::SuccessNoErrors();
 // {{{ 98 1 0 "da508d39_159b_427e_aaa6710531d0cc7f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ReturnString = RETURN::CreateReturnString(ID, Translate("Init always succeeds"), Translate(""), Translate(""));
 // }} ""
-// {{ 99 1 0 "95fa9599_776c_4467_acb9e90a910c5a32" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 99 1 0 "c181bb46_c834_4264_867793cf56bbd8ea" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 100 1 0 "71eee36f_54c8_4551_9c4c3df38d33a9db" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 100 1 0 "c1c981b8_a357_4289_922af601dca9afd9" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
 // {{ 101 1 0 "a9b082bb_1e0b_4b0a_bd05eb418e9a6cd0" "{586C3429-F931-405f-9938-928E22C90BFA}"
@@ -888,8 +888,8 @@ ReturnString = STATUSUPDATE::DoCommand(ML_STAR, CommandString);
 // {{ 195 1 0 "7394a05a_6317_46f4_935df5f392cc88fe" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 196 1 0 "8d66d3c8_d027_4d38_a0959d4bbcb47027" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
-if (Module == "Desalt")
+// {{ 196 1 0 "ec590d99_84d3_47ac_86e39db64af09ce4" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (Module == "IMCS SizeX Desalt")
 {
 // }} ""
 // {{{ 197 1 0 "768fad31_e2bc_4e85_835d74c3f45f559a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
@@ -898,7 +898,7 @@ ID = RETURNIDS::SuccessNoErrors();
 // {{{ 198 1 0 "e8ebea63_a1be_48db_8db767130b96e417" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ReturnString = RETURN::CreateReturnString(ID, Translate("Init always succeeds"), Translate(""), Translate(""));
 // }} ""
-// {{ 199 1 0 "8d66d3c8_d027_4d38_a0959d4bbcb47027" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 199 1 0 "ec590d99_84d3_47ac_86e39db64af09ce4" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
 // {{ 200 1 0 "7394a05a_6317_46f4_935df5f392cc88fe" "{586C3429-F931-405f-9938-928E22C90BFA}"
@@ -1062,4 +1062,4 @@ PFIZERTOOLSVCURRENT::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-04-05 18:21$$checksum=86ad1b68$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-04-12 17:13$$checksum=91f6b9b0$$length=084$$
