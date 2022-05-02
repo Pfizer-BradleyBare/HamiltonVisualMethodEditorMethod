@@ -31,6 +31,7 @@ function GetCommandStringParameterStringsArrayOLD( variable & i_CommandStringArr
 function GetDictionaryItem( variable & i_Dictionary[], variable InputKey, variable & OutputValue ) variable ;
 function ParseCommandParametersString( variable InputCommand, variable & OutputDictionary[] ) void ;
 function StartSystem(  ) void ;
+function WriteDictionaryItem( variable & Dict[], variable WriteValue ) void ;
 function WriteResponse(  ) void ;
 // }} ""
 function _InitLibrary() {
@@ -57,29 +58,29 @@ private file ResponseFile;
 // {{ 5 "WriteResponse" "InitLocals"
 // }} ""
 /* {{ 1 "" "0" */ if(0){  /* }} "" */
-// {{{ 200 1 0 "c2ccb78a_1077_43d0_8e3e8fc85f7531d3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 211 1 0 "c2ccb78a_1077_43d0_8e3e8fc85f7531d3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
-// {{{ 201 1 0 "00866f24_5b9e_4086_946e9826b5f385ae" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 212 1 0 "00866f24_5b9e_4086_946e9826b5f385ae" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("********************** Give Response ************************"), Translate(""));
 // }} ""
-// {{{ 202 1 0 "9729e8f3_f150_4d10_99befb342bdeebe3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 213 1 0 "9729e8f3_f150_4d10_99befb342bdeebe3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
 /* {{ 1 "" "1" */ } /* }} "" */
-// {{{ 203 1 0 "4116def8_3fa8_4203_84ebfd8fb2c662eb" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 214 1 0 "4116def8_3fa8_4203_84ebfd8fb2c662eb" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 _LIBRARY_COMMANDS_CollectedResponses = StrConcat2(_LIBRARY_COMMANDS_CollectedResponses, Translate("]"));
 // }} ""
-// {{{ 204 1 0 "15c3b74a_3a33_4bb0_94690cc9810c67b0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 215 1 0 "15c3b74a_3a33_4bb0_94690cc9810c67b0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 PythonRootPath = SCRIPT::GetPythonRootPath();
 // }} ""
-// {{{ 205 1 0 "c0f01df7_e3c7_4c38_a72c4ccc6f7eb30f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 216 1 0 "c0f01df7_e3c7_4c38_a72c4ccc6f7eb30f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ScriptRootPath = SCRIPT::GetScriptRootPath();
 // }} ""
-// {{{ 206 1 0 "a55a827b_52ea_4392_83bb03db40b61ac3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 217 1 0 "a55a827b_52ea_4392_83bb03db40b61ac3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 FilePath = StrConcat2(ScriptRootPath, Translate("\\CommunicationFolder\\Temp_Response.txt"));
 // }} ""
-// {{ 207 1 0 "0734eeda_c45c_4696_b88c1864a8672a70" "{B31F3534-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 218 1 0 "0734eeda_c45c_4696_b88c1864a8672a70" "{B31F3534-5D80-11d4-A5EB-0050DA737D89}"
 ResponseFile.AddField(1, _LIBRARY_COMMANDS_CollectedResponses, hslString);
 ResponseFile.SetDelimiter(hslAsciiText);
 if( 0 == ResponseFile.Open(FilePath, hslWrite) )
@@ -87,23 +88,23 @@ if( 0 == ResponseFile.Open(FilePath, hslWrite) )
     MECC::RaiseRuntimeErrorEx(-1523711743, MECC::IDS::stepNameFileOpen, MECC::IDS::errorStepFileOpenFailed, FilePath, "HxMetEdCompCmd");
 }
 // }} ""
-// {{ 208 1 0 "2c484de3_1e1f_4cf8_bced5f5a87037cc7" "{B31F3537-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 219 1 0 "2c484de3_1e1f_4cf8_bced5f5a87037cc7" "{B31F3537-5D80-11d4-A5EB-0050DA737D89}"
 if( 0 == ResponseFile.WriteRecord() )
 {
     MECC::RaiseRuntimeErrorEx(-1473380096, MECC::IDS::stepNameFileWrite, MECC::IDS::errorStepFailed, "", "HxMetEdCompCmd");
 }
 // }} ""
-// {{ 209 1 0 "999a1d6d_be5b_4561_8c741e9de3b8dd0e" "{B31F3538-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 220 1 0 "999a1d6d_be5b_4561_8c741e9de3b8dd0e" "{B31F3538-5D80-11d4-A5EB-0050DA737D89}"
 if( 0 != ResponseFile.Close() )
 {
     MECC::RaiseRuntimeErrorEx(-1456602880, MECC::IDS::stepNameFileClose, MECC::IDS::errorStepFailed, "", "HxMetEdCompCmd");
 }
 ResponseFile.RemoveFields();
 // }} ""
-// {{{ 210 1 0 "507bcc26_ffbb_4403_b9fd63aa9a411324" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 221 1 0 "507bcc26_ffbb_4403_b9fd63aa9a411324" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Command_Base = StrConcat12(Translate("C:\\windows\\system32\\cmd.exe /C "), Translate("\"\""), PythonRootPath, Translate("\\python.exe\" "), Translate(" \""), ScriptRootPath, Translate("\\RenameFile.py\""), Translate(""), Translate(""), Translate(""), Translate(""), Translate(""));
 // }} ""
-// {{{ 211 1 0 "38f50371_d11d_459b_baf1165afcee2cd7" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 222 1 0 "38f50371_d11d_459b_baf1165afcee2cd7" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Util::SyncShell(Command_Base, 1, code);
 // }} ""
 // {{{ 5 "WriteResponse" "End"
@@ -845,7 +846,6 @@ private variable Size;
 private variable ValSize;
 private variable KeySize;
 private variable Counter;
-private variable Output[];
 // {{ 5 "ArraysToDictionary" "InitLocals"
 // }} ""
 // {{ 1 1 0 "3bc7c5b6_5b2a_490c_865f1a29c355eb21" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
@@ -899,8 +899,60 @@ HSLExtensions::Array2D::SetValue(o_Dict, 2, Counter, i_Values.ElementAt( Counter
 // {{{ 5 "ArraysToDictionary" "End"
 }
 // }} ""
+// {{{ 5 "WriteDictionaryItem" "Begin"
+function WriteDictionaryItem( variable & Dict[], variable WriteValue ) void {
+// }} ""
+private variable NumTitles;
+private variable InputKey;
+private variable TitleString;
+private variable Count;
+private variable ArrayString;
+private variable OutputValue;
+private variable TitlesArray[];
+private variable i_Dictionary[];
+private variable ParamsArray[];
+// {{ 5 "WriteDictionaryItem" "InitLocals"
+// }} ""
+// {{{ 200 1 0 "74a9ca62_2ca6_4e75_bf291a5a955be4f3" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+TitlesArray = HSLExtensions::Array2D::GetColumn(i_Dictionary, 1);
+// }} ""
+// {{{ 201 1 0 "7fc2c6bc_9de8_4e96_a9275ebd0ee8367d" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ParamsArray = HSLExtensions::Array2D::GetColumn(i_Dictionary, 2);
+// }} ""
+// {{ 202 1 0 "8be9b8d2_c229_44bb_bac3c06c5c688eea" "{72EACF88-8D49-43e3-92C8-2F90E81E3260}"
+NumTitles=TitlesArray.GetSize();
+// }} ""
+// {{{ 203 1 0 "d7b2211e_785f_49b8_97bdca8206a77f81" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+TitleString = StrMakeLowerCopy(InputKey);
+// }} ""
+// {{ 204 1 0 "df1d13b4_eaea_4301_8ab7796303983e8d" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+{
+for(Count = 0; Count < NumTitles;)
+{
+Count = Count + 1;
+// }} ""
+// {{{ 205 1 0 "a9ea9f48_49f8_4466_9278e01a6034d638" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+ArrayString = StrMakeLowerCopy(TitlesArray.ElementAt( Count -1));
+// }} ""
+// {{ 206 1 0 "125b33ec_ccf5_4c50_ada3e7074db42698" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (ArrayString == TitleString)
+{
+// }} ""
+// {{ 207 1 0 "1f36dfb0_5db9_4e63_8be4d2b0dcffa735" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+ParamsArray[ Count -1] = WriteValue;
+// }} ""
+// {{ 208 1 0 "125b33ec_ccf5_4c50_ada3e7074db42698" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+}
+// }} ""
+// {{ 209 1 0 "df1d13b4_eaea_4301_8ab7796303983e8d" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+}
+}
+// }} ""
+// {{{ 5 "WriteDictionaryItem" "End"
+}
+// }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-04-27 15:16$$checksum=db73813e$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-05-02 11:50$$checksum=6518defc$$length=084$$
