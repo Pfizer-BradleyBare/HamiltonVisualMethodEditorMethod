@@ -95,7 +95,6 @@ variable _ASYNC_PROCESS_USER_INFORMATION_KillFlag;
 variable _ASYNC_PROCESS_USER_INFORMATION_HeaterFlag;
 variable InnerButtonChoice;
 variable loopCounter2;
-variable MethodExecutionText;
 /* {{ 2 "VariableInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
  namespace _Method { #include "HSLMETEDLib.hs_" } 
@@ -199,8 +198,8 @@ InnerButtonChoice = 1;
 // {{ 24 2 0 "7a7440a4_f9bc_464d_80ce0f708f378958" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 25 2 0 "f4709ad8_c37b_4cc0_9378fabb8c334a11" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialog5201DEA262654cf9A3A417DB9D3D54D8.InitCustomDialog( "f4709ad8_c37b_4cc0_9378fabb8c334a11" );
+// {{ 25 2 0 "7af83904_f4a5_4d81_99e52604cf74474d" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialog5201DEA262654cf9A3A417DB9D3D54D8.InitCustomDialog( "7af83904_f4a5_4d81_99e52604cf74474d" );
 customDialog5201DEA262654cf9A3A417DB9D3D54D8.SetCustomDialogProperty( "button1.IsVisible", _ASYNC_PROCESS_USER_INFORMATION_DeckLoadingFlag );
 customDialog5201DEA262654cf9A3A417DB9D3D54D8.SetCustomDialogProperty( "button2.IsVisible", _ASYNC_PROCESS_USER_INFORMATION_HeaterFlag );
 customDialog5201DEA262654cf9A3A417DB9D3D54D8.ShowCustomDialog();
@@ -1078,4 +1077,4 @@ DEBUGGING::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-05-07 09:19$$checksum=162ab877$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-05-24 11:23$$checksum=2dc0375c$$length=084$$
