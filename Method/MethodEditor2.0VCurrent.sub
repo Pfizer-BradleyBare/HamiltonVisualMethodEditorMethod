@@ -8,43 +8,50 @@ function OnAbort(  ) void {
 // }} ""
 // {{ 5 "OnAbort" "InitLocals"
 // }} ""
-// {{{ 289 1 0 "6e2a0f93_c24c_44ef_bd4d70f4c58e18b0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{ 300 1 0 "9f46921f_6cfa_4d12_b73a68984108a2a3" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+if (ScriptRunningFlag == "True")
+{
+// }} ""
+// {{{ 301 1 0 "a14fb79b_cbff_4c9a_97393657e225a27c" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 COMMANDS::FinishRun();
 // }} ""
-// {{ 290 1 0 "3533cb01_4b07_4c29_96610b3c08d8e43d" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 302 1 0 "9f46921f_6cfa_4d12_b73a68984108a2a3" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+}
+// }} ""
+// {{ 303 1 0 "2047945f_095d_4a08_8dd0cae61e9ea0a6" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 291 1 0 "2fcd66bd_f277_49a8_b05aa0b3391b20a3" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 304 1 0 "9f9d1e97_918f_450c_8b3b11803c30d824" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 _ASYNC_PROCESS_USER_INFORMATION_KillFlag = Translate("True");
 // }} ""
-// {{{ 292 1 0 "77ccb08e_fdbd_4f2f_afe2b1a6096fccf3" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 305 1 0 "a01966ec_aeb2_44c8_99b836e5bf804327" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 HEATER::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 293 1 0 "c0e5df37_e972_4501_bb7b4ff474c11fe1" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 306 1 0 "a0eb2a42_1de2_4002_a609184560255189" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 LID::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 294 1 0 "5f1ce07e_4331_4018_a8a01fdbb8705e33" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 307 1 0 "1b5dae35_1be5_4c7a_876f330b731aab18" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 NOTIFY::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 295 1 0 "d9399fc1_215f_4b22_a72bc62c51ed82cf" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 308 1 0 "711f35ca_d2f4_4bf8_b0f17ce4cc3d287d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 PIPETTE::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 296 1 0 "fb36b1b3_69af_405c_9f208f38aa61807e" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 309 1 0 "343e8040_7168_4e33_8ccd9163a4611111" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 STATUSUPDATE::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 297 1 0 "22d8c32e_c798_406d_b34576dc7e602b10" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 310 1 0 "a4398396_ac55_4a75_8e8f10c4be9587a9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 TIMER::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 298 1 0 "887e05ab_b83a_4c74_bafcd4d71e043485" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 311 1 0 "bada2167_017e_4899_95bf9a32b1f0adea" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 TRANSPORT::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 299 1 0 "e32db368_3218_4ae6_919a3368440c607a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 312 1 0 "60b25a73_f2c7_481f_b7b55b3ea7d04d45" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 VACUUM::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 300 1 0 "28fbc5cc_02ee_488d_8d885154089df4cc" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 313 1 0 "8ab70708_34c8_45f2_8a1719baa7f7a74d" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 MAGNETIC_BEADS::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{ 301 1 0 "3533cb01_4b07_4c29_96610b3c08d8e43d" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 314 1 0 "2047945f_095d_4a08_8dd0cae61e9ea0a6" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
 // {{{ 5 "OnAbort" "End"
@@ -58,34 +65,34 @@ private event _Temp;
 private variable __Temp;
 // {{ 5 "RunMakerScript" "InitLocals"
 // }} ""
-// {{{ 278 1 0 "e0a24387_7847_4142_b8e5fe2ddee57d67" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 289 1 0 "e0a24387_7847_4142_b8e5fe2ddee57d67" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
-// {{{ 279 1 0 "bea077e9_1754_4675_b88675099fdf6a63" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 290 1 0 "bea077e9_1754_4675_b88675099fdf6a63" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("************ Running Method Maker Script *****************"), Translate(""));
 // }} ""
-// {{{ 280 1 0 "f72a103e_8eb4_4497_874722f1ff853818" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 291 1 0 "f72a103e_8eb4_4497_874722f1ff853818" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
-// {{{ 281 1 0 "f15ef209_d39c_4409_b42de85ed2a5fed0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 292 1 0 "f15ef209_d39c_4409_b42de85ed2a5fed0" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 PythonRootPath = SCRIPT::GetPythonRootPath();
 // }} ""
-// {{{ 282 1 0 "f884c049_bd62_4985_b564fd8fe330809a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 293 1 0 "f884c049_bd62_4985_b564fd8fe330809a" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 ScriptRootPath = SCRIPT::GetScriptRootPath();
 // }} ""
-// {{{ 283 1 0 "7fa1fda7_8b27_43ed_b9c8f82d0306dc64" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 294 1 0 "7fa1fda7_8b27_43ed_b9c8f82d0306dc64" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Command_Base = StrConcat12(Translate("C:\\windows\\system32\\cmd.exe /K "), Translate("\"\""), PythonRootPath, Translate("\\python.exe\" "), Translate(" \""), ScriptRootPath, Translate("\\MethodMaker.py\""), Translate(""), Translate(""), Translate(""), Translate(""), Translate(""));
 // }} ""
-// {{{ 284 1 0 "30968835_c654_4eaa_95848e1707419917" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 295 1 0 "30968835_c654_4eaa_95848e1707419917" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 Command_Base = StrConcat12(Command_Base, Translate(" "), Translate("\""), Excel_File_Path, Translate("\""), Translate(" "), Start_Pos, Translate(" "), RunType, Translate("\""), Translate(""), Translate(""));
 // }} ""
-// {{{ 285 1 0 "8c0f1801_12a1_43be_b08c208883a458cd" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 296 1 0 "8c0f1801_12a1_43be_b08c208883a458cd" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Command_Base, Translate(""));
 // }} ""
-// {{{ 286 1 0 "f75f2b72_4f94_4a99_a395abe5ea2f6f50" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 297 1 0 "f75f2b72_4f94_4a99_a395abe5ea2f6f50" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 _ = Util::AsyncShell(Command_Base, 2, _Temp, __Temp);
 // }} ""
-// {{ 287 1 0 "1ceb1851_8590_4e71_ace42325e953bdfa" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
+// {{ 298 1 0 "1ceb1851_8590_4e71_ace42325e953bdfa" "{F07B0071-8EFC-11d4-A3BA-002035848439}"
 
 // }} ""
 // {{{ 5 "RunMakerScript" "End"
@@ -97,53 +104,53 @@ private function ChooseMethodFile(  ) variable {
 private variable loopCounter2;
 // {{ 5 "ChooseMethodFile" "InitLocals"
 // }} ""
-// {{{ 264 1 0 "9431f1be_2d3c_47a2_b315063865b4b1f6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 275 1 0 "9431f1be_2d3c_47a2_b315063865b4b1f6" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
-// {{{ 265 1 0 "ea4eab91_bc63_4ccf_938f491f62599306" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 276 1 0 "ea4eab91_bc63_4ccf_938f491f62599306" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************* Selecting Method File ********************"), Translate(""));
 // }} ""
-// {{{ 266 1 0 "5c443bd1_da23_4f94_a5fa32c047998aed" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 277 1 0 "5c443bd1_da23_4f94_a5fa32c047998aed" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 TrcTrace(Translate("******************************************************************"), Translate(""));
 // }} ""
-// {{{ 267 1 0 "5f613e7a_e5ac_474f_bc1d0d3de556e63c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 278 1 0 "5f613e7a_e5ac_474f_bc1d0d3de556e63c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 AswStandardDialogs::Initialize();
 // }} ""
-// {{ 268 1 0 "e985a1d5_a30d_4f92_9927a9b4153b6ea1" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 279 1 0 "e985a1d5_a30d_4f92_9927a9b4153b6ea1" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 Out = Translate("");
 // }} ""
-// {{ 269 1 0 "b00a760d_85c9_473c_9355897b3759fde5" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 280 1 0 "b00a760d_85c9_473c_9355897b3759fde5" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
 {
 loopCounter2 = 0;
 while (Out == "")
 {
 loopCounter2 = loopCounter2 + 1;
 // }} ""
-// {{{ 270 1 0 "95cb54be_3dff_49fc_814c6b3b09d56d2c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 281 1 0 "95cb54be_3dff_49fc_814c6b3b09d56d2c" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 AswStandardDialogs::FileBrowserDialog(Translate("Choose File"), 0, 0, 0, Translate("Please Choose a Method Maker Excel File"), 1, Translate(""), 0, Translate(""), Out);
 // }} ""
-// {{ 271 1 0 "35ad6372_cb2e_4b03_b4864cb9ce06dbf7" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 282 1 0 "35ad6372_cb2e_4b03_b4864cb9ce06dbf7" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 if (Out == "")
 {
 // }} ""
-// {{{ 272 1 0 "d6cb1fff_1e9c_4937_81f740b3cf1067f8" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 283 1 0 "d6cb1fff_1e9c_4937_81f740b3cf1067f8" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 AswStandardDialogs::MessageDialog(Translate("Error"), 1, 0, 0, 0, 0, Translate("File not selected... Please select a file from the dialog."));
 // }} ""
-// {{ 273 1 0 "35ad6372_cb2e_4b03_b4864cb9ce06dbf7" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 284 1 0 "35ad6372_cb2e_4b03_b4864cb9ce06dbf7" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
 // }} ""
-// {{ 274 1 0 "b00a760d_85c9_473c_9355897b3759fde5" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 285 1 0 "b00a760d_85c9_473c_9355897b3759fde5" "{B31F3532-5D80-11d4-A5EB-0050DA737D89}"
 }
 }
 // }} ""
-// {{{ 275 1 0 "0e0e789b_3c7b_42fd_9cc9f29075e0fee0" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
+// {{{ 286 1 0 "0e0e789b_3c7b_42fd_9cc9f29075e0fee0" "{C1F3C015-47B3-4514-9407-AC2E65043419}"
 AswStandardDialogs::Terminate();
 // }} ""
-// {{{ 276 1 0 "619450f6_3b9c_42aa_aa2d4586fda395cc" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+// {{{ 287 1 0 "619450f6_3b9c_42aa_aa2d4586fda395cc" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
 return (Out);
 // }} ""
 // {{{ 5 "ChooseMethodFile" "End"
 }
 // }} ""
 /* {{ 2 "SubmethodInsertLine" "" */ // }} ""
-// $$author=fcnamr-adwmsbc$$valid=0$$time=2022-06-16 09:44$$checksum=418ed0c4$$length=093$$
+// $$author=BAREB$$valid=0$$time=2022-06-18 17:50$$checksum=0c88ff44$$length=084$$
