@@ -7,7 +7,6 @@
 #include "FileHandling_HSLFiLibEx\\HSLFilLibEx.hsl"
 #include "HSLFilLib.hsl"
 #include "HSLExtensions\\Array2D.hsl"
-#include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorMethod\\Library\\PfizerTools\\PfizerToolsVCurrent.hs_"
 #include "C:\\Program Files (x86)\\HAMILTON\\BAREB\\Script\\HamiltonVisualMethodEditor\\HamiltonVisualMethodEditorConfiguration\\Modules\\Script\\Module\\Script.hs_"
 /* {{ 2 "LibraryInsertLine" "" */ // }} ""
 // {{ 2 "TemplateIncludeBlock" ""
@@ -36,13 +35,11 @@ function WriteResponse(  ) void ;
 // }} ""
 function _InitLibrary() {
 // {{ 2 "AutoInitBlock" ""
-PFIZERTOOLSVCURRENT::_InitLibrary();
 SCRIPT::_InitLibrary();
 // }} ""
 }
 function _ExitLibrary() {
 // {{ 2 "AutoExitBlock" ""
-PFIZERTOOLSVCURRENT::_ExitLibrary();
 SCRIPT::_ExitLibrary();
 // }} ""
 }
@@ -541,11 +538,11 @@ Elapsed = CommandTimer.GetElapsedTime();
 if (Elapsed >= 270)
 {
 // }} ""
-// {{{ 65 1 0 "e3976cf3_22e5_4649_a555611a7b862231" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-PFIZERTOOLSVCURRENT::NotifyContacts(Translate("Possible Script Error."), Translate("Hello, the scripts appear to have stop communicating with the Hamilton. This run is being aborted. Do not fret! You can resume the method normally. Remember to save the excel sheet before you restart method execution!"));
+// {{ 65 1 0 "dbc57525_8c1b_46dc_a70880b86a4448f6" "{F17B7626-27CB-47f1-8477-8C4158339A6D}"
+CommandStringArray.AddAsLast(Translate("TimerExpired"));
 // }} ""
-// {{ 66 1 0 "103d33b4_eed1_4890_813a040dc562e594" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
-abort;
+// {{{ 66 1 0 "bca55a5b_8e51_4784_a0e4e408db3c9e3c" "{9EC997CD-FD3B-4280-811B-49E99DCF062C}"
+return;
 // }} ""
 // {{ 67 1 0 "d1dad777_8c0f_4f18_8f28b8ad166cde9a" "{B31F3531-5D80-11d4-A5EB-0050DA737D89}"
 }
@@ -907,7 +904,6 @@ private variable InputKey;
 private variable TitleString;
 private variable Count;
 private variable ArrayString;
-private variable OutputValue;
 private variable TitlesArray[];
 private variable i_Dictionary[];
 private variable ParamsArray[];
@@ -955,4 +951,4 @@ ParamsArray[ Count -1] = WriteValue;
 // {{{ 2 "LibraryNamespace" "End"
 } // library namespace
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-05-02 11:50$$checksum=6518defc$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-06-18 18:04$$checksum=3fa4cbee$$length=084$$
