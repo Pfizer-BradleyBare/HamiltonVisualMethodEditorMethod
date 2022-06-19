@@ -338,8 +338,8 @@ _Log_Options.AddAsLast(Translate("Repeat Last Step then Continue"));
 // {{{ 23 1 0 "43672da7_5030_4aaf_953b4c8f8521fc4f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 STATUSUPDATE::DoCommand(ML_STAR, Translate("[Command]AddProgressDetail[DetailMessage]Preflight checklist"));
 // }} ""
-// {{ 24 1 0 "5ab7bb3e_16a9_4953_bd91989b2551f865" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialogAADF36179D454953A8F34F4CB9510982.InitCustomDialog( "5ab7bb3e_16a9_4953_bd91989b2551f865" );
+// {{ 24 1 0 "aed01a20_455e_4dc5_bddf4098f5391f9b" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialogAADF36179D454953A8F34F4CB9510982.InitCustomDialog( "aed01a20_455e_4dc5_bddf4098f5391f9b" );
 customDialogAADF36179D454953A8F34F4CB9510982.ShowCustomDialog();
 PreFlightCheckOutput = customDialogAADF36179D454953A8F34F4CB9510982.GetCustomDialogProperty( "ReturnValue" );
 // }} ""
@@ -347,8 +347,8 @@ PreFlightCheckOutput = customDialogAADF36179D454953A8F34F4CB9510982.GetCustomDia
 if (PreFlightCheckOutput == 2)
 {
 // }} ""
-// {{ 26 1 0 "f7ef9e16_78f2_4894_a89df376b904f2d4" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
-customDialog0878D03254EC4d50829B0589426F7D17.InitCustomDialog( "f7ef9e16_78f2_4894_a89df376b904f2d4" );
+// {{ 26 1 0 "03f2eb16_50f7_4bd4_bd23e76447291357" "{998A7CCC-4374-484D-A6ED-E8A4F0EB71BA}"
+customDialog0878D03254EC4d50829B0589426F7D17.InitCustomDialog( "03f2eb16_50f7_4bd4_bd23e76447291357" );
 customDialog0878D03254EC4d50829B0589426F7D17.ShowCustomDialog();
 PreFlightCheckOutput = customDialog0878D03254EC4d50829B0589426F7D17.GetCustomDialogProperty( "ReturnValue" );
 // }} ""
@@ -438,8 +438,8 @@ if (Command.ElementAt( 1 -1) == "TimerExpired")
 // {{ 53 1 0 "83a17d36_e22a_43c1_81bc33b0af047545" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ScriptRunningFlag = Translate("False");
 // }} ""
-// {{{ 54 1 0 "82bccf66_2851_4485_b24707c5e98bd9ba" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-NOTIFY::DoCommand(ML_STAR, Translate("[Module]Notify[Command]SendMessage[Subject]Possible Script Error[Body]Hello, the scripts appear to have stopped communicating with the Hamilton. This run is being aborted. Do not fret! You can resume the method normally. Remember to save the excel sheet before you restart method execution!"));
+// {{{ 54 1 0 "922703e3_7fc0_4e64_80a13c77d6a8555c" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+NOTIFY::DoCommand(ML_STAR, Translate("[Module]Notify[Command]SendMessage[Subject]Possible Script Error[Body]Hello, the scripts appear to have stopped communicating with the Hamilton. This run is being aborted. Do not fret! You can resume the method normally. Remember to save the excel sheet before you restart method execution![WaitForUser]Yes"));
 // }} ""
 // {{ 55 1 0 "0b141ee3_a102_48d7_8e900a32497f2898" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
 abort;
@@ -911,8 +911,8 @@ if (Command.ElementAt( 1 -1) == "TimerExpired")
 // {{ 197 1 0 "f37536a5_f19d_41d9_ae57b3b111268a07" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 ScriptRunningFlag = Translate("False");
 // }} ""
-// {{{ 198 1 0 "e9f8b571_2886_4ae0_bdf7ed45e7ea4210" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
-NOTIFY::DoCommand(ML_STAR, Translate("[Module]Notify[Command]SendMessage[Subject]Possible Script Error[Body]Hello, the scripts appear to have stopped communicating with the Hamilton. This run is being aborted. Do not fret! You can resume the method normally. Remember to save the excel sheet before you restart method execution!"));
+// {{{ 198 1 0 "b322cc2a_dcad_4f86_a116743329f7d76f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+NOTIFY::DoCommand(ML_STAR, Translate("[Module]Notify[Command]SendMessage[Subject]Possible Script Error[Body]Hello, the scripts appear to have stopped communicating with the Hamilton. This run is being aborted. Do not fret! You can resume the method normally. Remember to save the excel sheet before you restart method execution![WaitForUser]Yes"));
 // }} ""
 // {{ 199 1 0 "ad954f25_9210_45f3_90c2147576f638d6" "{930D6C31-8EFB-11d4-A3BA-002035848439}"
 abort;
@@ -1150,40 +1150,43 @@ ScriptRunningFlag = Translate("False");
 // {{ 271 1 0 "7b9c73ec_e328_456b_b4a82b452c0c3048" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 272 1 0 "2ce3f45c_6a55_4e47_8514554269a08fe9" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{{ 272 1 0 "7eb72243_61ee_42f0_8f9d4ede90540bc1" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+NOTIFY::DoCommand(ML_STAR, Translate("[Module]Notify[Command]SendMessage[Subject]Method Completed Successfully[Body]Method is complete. Before clicking OK, you can still check the deck layout if you need help locating the final plate. Once you click OK, the method will shut down then close.[WaitForUser]Yes"));
+// }} ""
+// {{ 273 1 0 "2ce3f45c_6a55_4e47_8514554269a08fe9" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
-// {{ 273 1 0 "84c3395f_721a_4d30_be1bd307a4652746" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
+// {{ 274 1 0 "84c3395f_721a_4d30_be1bd307a4652746" "{B31F3543-5D80-11d4-A5EB-0050DA737D89}"
 _ASYNC_PROCESS_USER_INFORMATION_KillFlag = Translate("True");
 // }} ""
-// {{{ 274 1 0 "70c97019_d094_416b_9ea4647f8078b3ed" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 275 1 0 "70c97019_d094_416b_9ea4647f8078b3ed" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 HEATER::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 275 1 0 "3be7f2ed_fcf6_42c2_9b12e5b969a3d3d4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 276 1 0 "3be7f2ed_fcf6_42c2_9b12e5b969a3d3d4" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 LID::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 276 1 0 "7617d360_32f5_4421_b109857a4a9def02" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 277 1 0 "7617d360_32f5_4421_b109857a4a9def02" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 NOTIFY::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 277 1 0 "824f414a_9267_4eb2_bfa4b4ed014d3cf2" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 278 1 0 "824f414a_9267_4eb2_bfa4b4ed014d3cf2" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 PIPETTE::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 278 1 0 "76e0bf39_edf2_4cce_94bd8f82736e253f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 279 1 0 "76e0bf39_edf2_4cce_94bd8f82736e253f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 STATUSUPDATE::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 279 1 0 "fa10a84f_954d_457e_8dfd2f0b7ae8516f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 280 1 0 "fa10a84f_954d_457e_8dfd2f0b7ae8516f" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 TIMER::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 280 1 0 "14529603_d3bb_4184_8b7c405fbda69b75" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 281 1 0 "14529603_d3bb_4184_8b7c405fbda69b75" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 TRANSPORT::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 281 1 0 "b53688a6_1473_4e77_a2398c70172c48c9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 282 1 0 "b53688a6_1473_4e77_a2398c70172c48c9" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 VACUUM::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{{ 282 1 0 "ca0fddbb_9e49_49fc_919eba0f78575db7" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
+// {{{ 283 1 0 "ca0fddbb_9e49_49fc_919eba0f78575db7" "{7C4EF7A7-39BE-406a-897F-71F3A35B4093}"
 MAGNETIC_BEADS::DeInit(ML_STAR, Translate(""));
 // }} ""
-// {{ 283 1 0 "2ce3f45c_6a55_4e47_8514554269a08fe9" "{586C3429-F931-405f-9938-928E22C90BFA}"
+// {{ 284 1 0 "2ce3f45c_6a55_4e47_8514554269a08fe9" "{586C3429-F931-405f-9938-928E22C90BFA}"
 
 // }} ""
 // {{ 2 "AutoExitBlock" ""
@@ -1210,4 +1213,4 @@ DEBUGGING::_ExitLibrary();
 // {{{ 5 "main" "End"
 } }
 // }} ""
-// $$author=BAREB$$valid=0$$time=2022-06-18 18:09$$checksum=b062a745$$length=084$$
+// $$author=BAREB$$valid=0$$time=2022-06-19 09:43$$checksum=a99bc83c$$length=084$$
